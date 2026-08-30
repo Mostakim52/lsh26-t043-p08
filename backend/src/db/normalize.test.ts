@@ -286,12 +286,13 @@ describe("normalizeCase — student cross-references", () => {
 describe("normalizeCase — the bundled dataset", () => {
   const fixture = loadFixture();
 
-  it("loads the three seeded cases", () => {
+  it("loads the seeded cases, including our own authored dataset", () => {
     expect(fixture.problem_id).toBe("P08");
     expect(fixture.cases.map((c) => c.case_id)).toEqual([
       "PUB-01",
       "PUB-02",
       "PUB-03",
+      "OWN-01",
     ]);
   });
 
