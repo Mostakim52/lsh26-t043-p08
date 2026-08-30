@@ -1839,3 +1839,61 @@ tr.is-cancelled td:first-child { box-shadow: inset 3px 0 0 var(--fail); }
   body { background: #fff; }
   thead th { position: static; }
 }
+
+/* marks entry / CSV panel --------------------------------------------------- */
+
+.stack { display: flex; flex-direction: column; gap: 20px; }
+
+.marks-form { display: flex; flex-direction: column; gap: 16px; }
+
+.marks-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.marks-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.marks-form__subject {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+}
+
+.marks-form__subject-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.marks-form__absent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-2);
+  font-weight: 400;
+}
+
+.marks-form__inputs { display: flex; gap: 8px; }
+
+.marks-form__inputs input,
+.marks-form__row input,
+.marks-form__row select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.marks-form__row .field-block { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--text-2); }

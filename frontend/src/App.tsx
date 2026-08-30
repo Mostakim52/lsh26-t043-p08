@@ -13,6 +13,7 @@ import {
   type Teacher,
 } from './lib/auth';
 import { ChecklistsView } from './components/ChecklistsView';
+import { MarksEntry } from './components/MarksEntry';
 import { Overview } from './components/Overview';
 import { RulesView } from './components/RulesView';
 import { SignIn } from './components/SignIn';
@@ -20,7 +21,7 @@ import { StudentsView } from './components/StudentsView';
 import { ThemeToggle } from './components/ThemeToggle';
 import { TraceView } from './components/TraceView';
 
-export type View = 'overview' | 'students' | 'checklists' | 'rules';
+export type View = 'overview' | 'students' | 'checklists' | 'rules' | 'marks';
 
 
 const TITLES: Record<View, { title: string; blurb: string }> = {
@@ -39,6 +40,10 @@ const TITLES: Record<View, { title: string; blurb: string }> = {
   rules: {
     title: 'Rules the engine ran',
     blurb: 'Thresholds, scales and formulas, rendered from the same constants the calculation uses.',
+  },
+  marks: {
+    title: 'Marks entry',
+    blurb: 'Add a student by hand, or upload a CSV marks sheet - bad rows are rejected and named, not silently dropped.',
   },
 };
 
@@ -106,6 +111,12 @@ export default function App() {
     setOpenStudentId(null);
   }
 
+  function reloadDataset() {
+    loadDataset(preview)
+      .then(setDataset)
+      .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)));
+  }
+
   function openStudent(id: string) {
     setOpenStudentId(id);
     setView('students');
@@ -160,6 +171,7 @@ export default function App() {
             count={flaggedCount}
           />
           <NavItem id="rules" label="Rules" current={view} onGo={go} />
+          <NavItem id="marks" label="Marks entry" current={view} onGo={go} />
         </nav>
 
         <div className="sidebar__foot">
@@ -247,6 +259,8 @@ export default function App() {
             )
           ) : view === 'checklists' ? (
             <ChecklistsView lists={lists} results={results} onOpenStudent={openStudent} />
+          ) : view === 'marks' ? (
+            <MarksEntry dataset={dataset} onDataChanged={reloadDataset} />
           ) : (
             <RulesView />
           )}

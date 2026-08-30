@@ -16,6 +16,8 @@ function trimEnd(url: string): string {
 }
 
 const BASE = trimEnd(import.meta.env.VITE_API_BASE?.trim() ?? '') || '/api/v1';
+/** Base path for the marks-entry/CSV endpoints (students, import, export). */
+export const API_BASE = BASE;
 
 /** Whole `Dataset`: students, classes, subjects, marks. */
 export const RESULTS_URL = import.meta.env.VITE_RESULTS_URL?.trim() || `${BASE}/results`;
