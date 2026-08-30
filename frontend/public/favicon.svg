@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Favicon variant of logo.svg: heavier bars, no tick, so it survives 16px. -->
+  <defs>
+    <linearGradient id="fav-badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c76ff"/>
+      <stop offset="1" stop-color="#1d2b82"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="32" height="32" rx="7" fill="url(#fav-badge)"/>
+
+  <g fill="#ffffff">
+    <rect x="6.5" y="17" width="5" height="9" rx="2.5" opacity="0.6"/>
+    <rect x="13.5" y="12" width="5" height="14" rx="2.5" opacity="0.8"/>
+    <rect x="20.5" y="6.5" width="5" height="19.5" rx="2.5"/>
+  </g>
+</svg>

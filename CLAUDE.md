@@ -1,6 +1,6 @@
 # School Result Processing and GPA Engine
 
-Team **t043** · Problem **p09** · Event start code **LSH26-8490-C900**
+Team **t043** · Problem **p08** · Event start code **LSH26-8490-C900**
 
 Two halves: `frontend/` is built and working; `backend/` does not exist yet. This file is
 the contract between them. If you are picking up the backend, read **Your job** and **The
@@ -123,30 +123,121 @@ nullability and all.
 `practical: null` on a practical subject is read as a **0**, not as absent — it will fail
 the subject under R-11. Send `absent: true` for a missed paper, never a null or a zero.
 
+## Authentication
+
+**The frontend performs no authentication.** It holds no account list, compares no
+passwords and decides nothing about session validity. `frontend/src/lib/auth.ts` is a thin
+transport over three endpoints; every accept/reject is the backend's. Do not push any of
+this back into the client.
+
+### Session handling
+
+Set the session as an **httpOnly, SameSite=Lax cookie** at login. Do not return a token in
+the JSON body: a token the page can read is a token an XSS can steal, and the frontend
+deliberately keeps nothing in `localStorage` or `sessionStorage`. All three auth calls and
+the marks fetch send `credentials: 'include'`.
+
+### The `Teacher` object
+
+`login` and `session` both return exactly this — it is what the sidebar renders:
+
+```jsonc
+{
+  "username": "controller",
+  "name": "Nasrin Akter",
+  "role": "Exam controller",     // free text, shown under the name
+  "scope": "*"                   // "*" for the whole cohort, or a classId like "c9a"
+}
+```
+
+`scope` is carried for later per-class filtering. The frontend displays it but does not
+enforce it — **if a teacher must not see another class, `GET /results` has to filter
+server-side.**
+
+### Seeded dev accounts
+
+The sign-in screen shows these under a "Dev mode" panel so judges can get in without being
+handed a password out of band. The panel only types them into the form; nothing client-side
+checks them. Seed exactly these two, or change both sides together —
+`SEEDED_ACCOUNTS` in `frontend/src/components/SignIn.tsx`:
+
+| Username | Password | Name | Role | Scope |
+| --- | --- | --- | --- | --- |
+| `controller` | `result2026` | Nasrin Akter | Exam controller | `*` |
+| `teacher9a` | `class9a` | Abdul Karim | Class teacher · Class 9 - Section A | `c9a` |
+
+Hash the passwords at rest even for the demo seed. Rate-limit `/auth/login` if there is
+time; the frontend surfaces whatever `error.message` you return.
+
+### What the frontend does on each response
+
+| Response | Frontend behaviour |
+| --- | --- |
+| `login` `200` | Stores the `Teacher` in React state only, then fetches results |
+| `login` `401` | Shows `error.message`, stays on the gate |
+| `login` `404` | Shows "no sign-in service — start the backend" |
+| network failure | Shows the unreachable-service message with the URL it tried |
+| `session` `200` | Restores the console without a second sign-in |
+| `session` `401`/error | Shows the sign-in gate. An unreachable backend is never treated as a valid session |
+| `results` `401`/`403` | Shows "your session is no longer valid, sign in again" |
+
+## All data comes from the backend
+
+**Nothing about a student is bundled into the app.** `VITE_RESULTS_URL` now defaults to
+`/api/v1/results`, not to a local file: students, classes, subjects, marks, absences and
+the optional-subject choice are all fetched. The frontend holds no cohort of its own.
+
+What the frontend still owns is the **arithmetic** — grade points, GPA, letter grades,
+traces and checking lists are derived in `src/engine/` from the marks you send. That split
+is deliberate and unchanged: the backend owns the marks, the frontend owns the maths.
+
+### TEMPORARY: preview without the backend
+
+While `/api/v1/results` and `/auth/login` are being written, a dev-only escape hatch lets
+the portal be walked end to end:
+
+- Submitting the login form with **both fields empty** opens a preview session.
+- That session, and only that session, reads `public/data/sample-results.json`.
+- Every screen carries a "Preview session" banner, and the sidebar shows the account as
+  *Preview session · No backend · sample marks*.
+
+It is gated on `import.meta.env.DEV`, which Vite folds to `false` in `vite build`. The
+strings `Preview session`, `Preview without the backend` and `sample-results` are all
+verifiably **absent from the production bundle** — the branch cannot ship by accident.
+
+**To remove it when the backend lands:** delete the `PREVIEW_ENABLED` block in
+`frontend/src/lib/auth.ts`, the `PREVIEW_SOURCE` branch in `frontend/src/lib/api.ts`, the
+`preview` state and banner in `frontend/src/App.tsx`, and the `gate__preview` /
+`preview-bar` rules in the stylesheet.
+
 ## API endpoints to build
 
-Base path `/api/v1`. JSON in, JSON out. No auth for now; add it only if there is time.
+Base path `/api/v1`. JSON in, JSON out. **Authentication is now required, not optional** —
+the frontend has no sign-in of its own and cannot be entered until `/auth/login` exists.
+See **Authentication** below.
 
-### Required to unblock the frontend — one endpoint
+### Required to unblock the frontend — four endpoints
 
 | | |
 | --- | --- |
-| **`GET /api/v1/results`** | Returns the whole `Dataset` object above: `meta`, `classes`, `subjects`, `students` with marks. |
+| **`POST /api/v1/auth/login`** | Body `{ "username", "password" }`. On success `200` with a `Teacher` and a session cookie; on bad credentials `401` with the error envelope. |
+| **`GET /api/v1/auth/session`** | `200` with the `Teacher` for a valid session cookie, `401` otherwise. Called on every page load. |
+| **`POST /api/v1/auth/logout`** | Clears the session. `204`. |
+| **`GET /api/v1/results`** | The whole `Dataset` object above. **Must return `401` without a valid session** — this is the endpoint that actually protects the marks. |
 
-That is genuinely all the frontend needs today. Point it at the backend with:
+Point the frontend at the backend with:
 
-```bash
-VITE_RESULTS_URL=http://localhost:8000/api/v1/results npm run dev
-```
-
-On Windows PowerShell that inline syntax does not work — put the line in
-`frontend/.env.local` instead and run `npm run dev` normally:
+On Windows PowerShell the inline `VAR=value cmd` syntax does not work — put these in
+`frontend/.env.local` and run `npm run dev` normally:
 
 ```
 VITE_RESULTS_URL=http://localhost:8000/api/v1/results
+VITE_AUTH_URL=http://localhost:8000/api/v1/auth
 ```
 
-`frontend/src/lib/api.ts` reads that variable and changes nothing else.
+`frontend/src/lib/api.ts` and `frontend/src/lib/auth.ts` read those two variables and
+change nothing else. Both default to same-origin paths, so a backend that also serves the
+built frontend needs neither.
 
 ### Next, for marks entry
 
@@ -188,6 +279,56 @@ validation failure, `500` otherwise.
 The dev frontend runs on `http://localhost:5173`. Allow that origin for `GET`, `POST`,
 `PUT`, `PATCH` and the `Content-Type` header, or the browser will block every call.
 
+**Credentials matter here.** Every frontend call sends `credentials: 'include'`, so the
+backend must set `Access-Control-Allow-Credentials: true` and echo the exact origin —
+`Access-Control-Allow-Origin: *` is rejected by the browser when credentials are involved,
+and the session cookie will silently never be sent.
+
+## What changed in the frontend after the first push
+
+Everything below is already built and on `main`; it is listed so the backend contract and
+this file stay in step.
+
+- **Teacher sign-in gate.** Marks are not fetched until the backend confirms a session, so
+  an unauthenticated page load pulls no student data at all. Contract above.
+- **Splash sign-in screen.** Portal name, school, staggered entrance animation, and the
+  dev-mode credential panel. Honours `prefers-reduced-motion`.
+- **Light / dark / system themes.** One button cycles the three. The choice is stamped as
+  `data-theme` on `<html>`, persisted in `localStorage` under `gpa-console.theme`, and
+  re-applied by an inline script in `index.html` before first paint so there is no flash.
+  System is the default and follows the OS.
+- **Responsive down to 360px.** The sidebar becomes a drawer with a scrim under 900px;
+  wide tables scroll inside their own card rather than the page going sideways.
+- **Logo and favicon.** `frontend/public/logo.svg` and `favicon.svg` — ascending grade
+  bars with a verification tick. The favicon variant drops the tick to survive 16px.
+- **Naming.** The product is the **Teacher Result Portal**; the school name sits under it
+  on the splash and in the sidebar.
+- **Split-card login.** Gradient splash panel on the left, form on the right, in one
+  rounded card that fits the viewport — the form column scrolls inside the card rather
+  than pushing the splash off screen.
+- **Hand-built 3D scene.** `frontend/src/components/VaultScene.tsx` — an isometric vault
+  with a slot, and an A+ result sheet filed through it on a loop. Pure CSS 3D transforms:
+  no WebGL, no model file, no library, nothing added to `package.json`. It is
+  `aria-hidden`, `prefers-reduced-motion` freezes it, and the sheet's travel is bounded so
+  it stays inside the splash panel at every frame.
+- **Password reveal toggle** and leading field icons on the login form.
+
+### Frontend environment variables
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `VITE_RESULTS_URL` | `/api/v1/results` | Where marks are fetched from |
+| `VITE_AUTH_URL` | `/api/v1/auth` | Base path of the three auth endpoints |
+| `VITE_PORTAL_NAME` | `Teacher Result Portal` | Headline on the sign-in splash |
+| `VITE_SCHOOL_NAME` | `Shaheed Smrity Higher Secondary School` | Shown under the portal name |
+
+### Known consequence, flagged deliberately
+
+Because sign-in is now entirely server-side, **the frontend cannot be entered until the
+backend serves `/auth/login`.** Running `npm run dev` alone reaches the splash and stops
+there with "no sign-in service". That is the intended trade for keeping credential checks
+off the client — but it means the auth endpoints are the first thing to build, not the last.
+
 ## Running the frontend
 
 ```bash
@@ -213,9 +354,11 @@ first integration test.
 
 ## Definition of done for the backend
 
-- [ ] `GET /api/v1/results` returns the dataset shape above and the frontend renders it
-      with only `VITE_RESULTS_URL` changed
-- [ ] CORS allows `http://localhost:5173`
+- [ ] `POST /auth/login`, `GET /auth/session` and `POST /auth/logout` behave as above, and
+      the two seeded dev accounts sign in
+- [ ] `GET /api/v1/results` returns `401` without a session, and the dataset shape above
+      with one, rendering in the frontend with only `VITE_RESULTS_URL` and `VITE_AUTH_URL` set
+- [ ] CORS allows `http://localhost:5173` **with credentials** (exact origin, not `*`)
 - [ ] The field rules table is enforced, with `422` and the error shape on failure
 - [ ] Absent papers are stored as `absent: true` with null marks, never as zeros
 - [ ] The sample dataset round-trips through the API unchanged

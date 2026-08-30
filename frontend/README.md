@@ -1,6 +1,6 @@
 # Result Processing and GPA Engine — frontend
 
-Team **t043** · Problem **p09** · LSH26-8490-C900
+Team **t043** · Problem **p08** · LSH26-8490-C900
 
 A result office console: it loads a cohort of marks, grades every student against the
 published rules, and shows the working. The grading engine runs in the browser, so the
@@ -18,12 +18,32 @@ npm run dev
 
 Then open http://localhost:5173.
 
+> **The backend must be running** for real use. Sign-in is entirely server-side and every
+> student, class, subject and mark is fetched — this app checks no passwords and bundles no
+> cohort of its own. Point it at the backend in `.env.local`:
+>
+> ```
+> VITE_AUTH_URL=http://localhost:8000/api/v1/auth
+> VITE_RESULTS_URL=http://localhost:8000/api/v1/results
+> ```
+>
+> The dev-mode panel on the sign-in screen shows the two accounts the backend seeds, and
+> fills the form for you. The full contract is in the repo-root `CLAUDE.md`.
+>
+> **Until the backend exists:** log in with **both fields empty** (or press *Preview
+> without the backend*) to walk the whole portal on the bundled sample marks. Every screen
+> then carries a "Preview session" banner. This path is gated on `import.meta.env.DEV` and
+> is stripped from `npm run build` — see the removal checklist in `CLAUDE.md`.
+
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Dev server on port 5173 |
 | `npm run build` | Type-check and produce `dist/` |
 | `npm test` | 28 engine tests, including every seeded edge case |
 | `npm run gen:data` | Regenerates `public/data/sample-results.json` (deterministic) |
+
+Environment variables: `VITE_RESULTS_URL`, `VITE_AUTH_URL`, `VITE_PORTAL_NAME`,
+`VITE_SCHOOL_NAME` — see `src/vite-env.d.ts`.
 
 ## The four required items
 
@@ -47,6 +67,40 @@ subject that caused it and keeps the uncancelled average in view (R-13).
 optional rule, practical fail, absent — each with a plain-language "what a teacher checks
 by hand" column, an *Also on* column for students caught by more than one rule, CSV
 export and a print stylesheet.
+
+
+## Sign-in, themes and layout
+
+**Teacher sign in.** `src/lib/auth.ts` is a transport over `POST /auth/login`,
+`GET /auth/session` and `POST /auth/logout`. It holds no account list and compares no
+passwords; the backend decides everything. The session is an httpOnly cookie, so nothing
+is kept in `localStorage` or `sessionStorage` and every call sends
+`credentials: 'include'`. Marks are fetched only after the backend confirms a session,
+which means an unauthenticated page load holds no student data at all.
+
+**Themes.** One button in the top bar cycles light → dark → system. System is the default
+and follows the OS. An explicit choice is stamped as `data-theme` on `<html>`, saved under
+`gpa-console.theme`, and re-applied by an inline script in `index.html` before first paint
+so the page never flashes the wrong theme on reload.
+
+**Responsive.** Down to 360px. Under 900px the sidebar becomes a drawer with a scrim;
+under 720px wide tables scroll inside their own card so the page body never scrolls
+sideways. Entrance animation on the splash honours `prefers-reduced-motion`.
+
+**The sign-in screen.** A split card: gradient splash on the left, form on the right. The
+splash carries a 3D scene built by hand in `src/components/VaultScene.tsx` — an isometric
+vault with a slot and an A+ result sheet being filed through it, assembled from shaded
+faces with CSS 3D transforms. The sheet's travel is bounded so it never leaves the panel. No WebGL, no model file, no library, nothing added to `package.json`.
+It is `aria-hidden`, freezes under `prefers-reduced-motion`, and is dropped below 560px
+where it would cost more room than it earns.
+
+**Where data comes from.** `VITE_RESULTS_URL` defaults to `/api/v1/results`. No student
+data ships in the app; the engine computes grade points, GPA and traces from whatever
+marks the backend returns.
+
+**Logo.** `public/logo.svg` — ascending grade bars with a verification tick, on a rounded
+badge. `public/favicon.svg` is the same mark with heavier bars and no tick, so it still
+reads at 16px in a browser tab.
 
 ## The rules, as implemented
 

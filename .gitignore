@@ -1,0 +1,31 @@
+# Repo-wide ignores. Per-project rules live in their own .gitignore
+# (e.g. frontend/.gitignore) — a nested one only governs its own directory,
+# which is why .history/ needs an entry here as well as there.
+
+# editor local history / caches
+.history/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# dependencies and build output, wherever they appear
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# environment: never commit a real backend URL or credential
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*

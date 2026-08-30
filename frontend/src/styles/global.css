@@ -35,8 +35,10 @@
   --sidebar-w: 246px;
 }
 
+/* System dark, unless the teacher has explicitly chosen light. The same palette
+   is repeated below under [data-theme="dark"] so the toggle wins both ways. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --ink-900: #0a0d12;
     --ink-800: #0f141b;
     --ink-700: #1b222c;
@@ -918,10 +920,920 @@ tr.is-cancelled td:first-child { box-shadow: inset 3px 0 0 var(--fail); }
   .spotlight__row { grid-template-columns: 1fr; gap: 6px; }
 }
 
+/* Explicit dark choice. Same palette as the prefers-color-scheme block above;
+   plain CSS has no way to share one set of declarations across both. */
+:root[data-theme='dark'] {
+  --ink-900: #0a0d12;
+  --ink-800: #0f141b;
+  --ink-700: #1b222c;
+
+  --paper: #0d1117;
+  --surface: #141a22;
+  --surface-2: #19212b;
+  --border: #262f3c;
+  --border-strong: #37424f;
+
+  --text: #e4e8ee;
+  --text-2: #9aa5b4;
+  --text-3: #6e7987;
+
+  --accent: #7aa0ff;
+  --accent-soft: #16233f;
+  --pass: #4cc79f;
+  --pass-soft: #10281f;
+  --warn: #dda23f;
+  --warn-soft: #2c2110;
+  --fail: #f0776a;
+  --fail-soft: #2f1512;
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 8px 24px -16px rgb(0 0 0 / 70%);
+}
+
+/* ------------------------------------------------------------ brand mark -- */
+
+.brand__logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  flex: none;
+}
+
+/* ---------------------------------------------------------- theme toggle -- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-2);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.theme-toggle__icon {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------- signed-in user -- */
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.who__avatar {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border-radius: 50%;
+  background: #223049;
+  color: #b9c8e6;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.who__text {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.who__text strong {
+  color: #d4dae4;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.who__text span {
+  color: #6b7686;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar__meta {
+  margin-top: 11px;
+  padding-top: 10px;
+  border-top: 1px solid #1e2632;
+  display: grid;
+  gap: 3px;
+}
+
+/* ------------------------------------------------------------- buttons ---- */
+
+.btn--block {
+  width: 100%;
+  justify-content: center;
+}
+
+.btn--sm {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.sidebar .btn {
+  background: #1a2230;
+  border-color: #2b3546;
+  color: #c2cad6;
+}
+
+.sidebar .btn:hover {
+  background: #222c3d;
+  border-color: #3b4759;
+  color: #e6ebf3;
+}
+
+/* -------------------------------------------------------- labelled field -- */
+
+.field-block {
+  display: grid;
+  gap: 6px;
+}
+
+.field-block > span {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.field-block input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  width: 100%;
+}
+
+.field-block input:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+/* ============================================================== sign in === */
+
+.gate {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 28px 20px;
+  position: relative;
+  background:
+    radial-gradient(60% 55% at 15% 12%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%),
+    radial-gradient(55% 50% at 88% 85%, color-mix(in srgb, var(--pass) 10%, transparent), transparent 72%),
+    var(--paper);
+}
+
+.gate__theme {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  z-index: 3;
+}
+
+.gate__card {
+  width: min(1000px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 2px 4px rgb(16 20 27 / 5%), 0 30px 70px -34px rgb(16 20 27 / 40%);
+  animation: gate-card-in 640ms cubic-bezier(0.22, 0.68, 0.28, 1) backwards;
+}
+
+@keyframes gate-card-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---- left: splash panel ---- */
+
+.gate__splash {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 30px 30px 34px;
+  min-height: 520px;
+  background: linear-gradient(158deg, #4a63ea 0%, #5a45c8 48%, #3a2f8f 100%);
+  color: #fff;
+  isolation: isolate;
+}
+
+/* soft light pools */
+.gate__splash::before {
+  content: '';
+  position: absolute;
+  inset: -25%;
+  z-index: -2;
+  background:
+    radial-gradient(36% 40% at 26% 22%, rgb(255 255 255 / 26%), transparent 70%),
+    radial-gradient(40% 38% at 80% 82%, rgb(126 233 199 / 20%), transparent 72%);
+  animation: gate-drift 20s ease-in-out infinite alternate;
+}
+
+/* faint ruled grid, like a mark ledger */
+.gate__splash::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 7%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 7%) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(115% 85% at 30% 35%, #000 20%, transparent 76%);
+}
+
+@keyframes gate-drift {
+  from { transform: translate3d(-3%, -2%, 0) scale(1); }
+  to   { transform: translate3d(4%, 3%, 0) scale(1.08); }
+}
+
+.gate__brandmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 72%);
+}
+
+.gate__logo { border-radius: 8px; }
+
+.gate__splashfoot { margin-top: auto; }
+
+.gate__portal {
+  margin: 0;
+  max-width: 12ch;
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.05;
+  letter-spacing: -0.028em;
+  font-weight: 680;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.gate__school {
+  margin: 11px 0 0;
+  max-width: 32ch;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: rgb(255 255 255 / 70%);
+}
+
+/* ---- the hand-built 3D scene ---- */
+
+.scene {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  perspective: 900px;
+  min-height: 230px;
+}
+
+.scene__stage {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  transform-style: preserve-3d;
+  transform: rotateX(56deg) rotateZ(45deg);
+  animation: scene-bob 7s ease-in-out infinite;
+}
+
+@keyframes scene-bob {
+  0%, 100% { transform: rotateX(56deg) rotateZ(45deg) translateZ(0); }
+  50%      { transform: rotateX(56deg) rotateZ(51deg) translateZ(10px); }
+}
+
+.vault { position: absolute; inset: 0; transform-style: preserve-3d; }
+
+.vault__top,
+.vault__left,
+.vault__right {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+}
+
+/* top face, lit */
+.vault__top {
+  transform: translateZ(65px);
+  background: linear-gradient(140deg, #a9b6ff, #8290f5 62%, #7a86ee);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 26%);
+  display: grid;
+  place-items: center;
+}
+
+/* the slot the disc drops through */
+.vault__slot {
+  width: 58%;
+  height: 11px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #2f2a72, #453c96);
+  box-shadow:
+    inset 0 2px 3px rgb(0 0 0 / 45%),
+    0 1px 0 rgb(255 255 255 / 22%);
+}
+
+/* the two body faces */
+.vault__left {
+  transform: rotateX(90deg) translateZ(65px);
+  transform-origin: center;
+  background: linear-gradient(180deg, #6f79e8, #4d51b8);
+}
+
+.vault__right {
+  transform: rotateY(90deg) translateZ(65px);
+  transform-origin: center;
+  background: linear-gradient(180deg, #5d68d8, #3c40a0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+/* grade lights on the front face */
+.pip {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 28%);
+}
+
+.pip--a { background: #7ee9c7; }
+.pip--b { background: #ffd166; }
+.pip--c { background: #ff8fa0; }
+
+/* the little yellow block tucked against the box */
+.chip {
+  position: absolute;
+  right: -34px;
+  bottom: -14px;
+  width: 40px;
+  height: 40px;
+  transform-style: preserve-3d;
+}
+
+.chip__top,
+.chip__left,
+.chip__right {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+}
+
+.chip__top   { transform: translateZ(20px); background: linear-gradient(140deg, #ffe08a, #ffc14d); }
+.chip__left  { transform: rotateX(90deg) translateZ(20px); background: #f0a92f; }
+.chip__right { transform: rotateY(90deg) translateZ(20px); background: #d98f22; }
+
+/* the result sheet that is filed through the slot */
+.sheet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46px;
+  height: 58px;
+  margin: -29px 0 0 -23px;
+  transform-style: preserve-3d;
+  animation: sheet-file 4.8s cubic-bezier(0.45, 0, 0.65, 1) infinite;
+}
+
+.sheet__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 7px;
+  border-radius: 5px;
+  background: linear-gradient(155deg, #ffffff, #eaeeff);
+  box-shadow:
+    0 8px 16px -7px rgb(20 16 60 / 60%),
+    inset 0 0 0 1px rgb(255 255 255 / 70%);
+}
+
+.sheet__grade {
+  margin-bottom: 2px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #14a97b;
+}
+
+.sheet__line {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: #c3cbe6;
+}
+
+.sheet__line--short { width: 62%; }
+
+/* Counter-rotates the stage so the sheet faces the viewer as it is filed. The
+   whole travel stays inside the stage, so nothing leaves the panel. */
+@keyframes sheet-file {
+  0% {
+    transform: translateZ(148px) rotateZ(-45deg) rotateX(-56deg) rotate(-7deg);
+    opacity: 0;
+  }
+  14% {
+    transform: translateZ(132px) rotateZ(-45deg) rotateX(-56deg) rotate(-5deg);
+    opacity: 1;
+  }
+  58% {
+    transform: translateZ(84px) rotateZ(-45deg) rotateX(-56deg) rotate(0deg);
+    opacity: 1;
+  }
+  74% {
+    transform: translateZ(63px) rotateZ(-45deg) rotateX(-56deg) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(63px) rotateZ(-45deg) rotateX(-56deg) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.scene__shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  transform: translateZ(-66px);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(23 18 70 / 55%), transparent 72%);
+  filter: blur(6px);
+}
+
+/* ---- right: the form ---- */
+
+.gate__panel {
+  display: flex;
+  /* `safe` centres while the form fits and falls back to the top when it does
+     not, instead of clipping the heading out of reach above the scroll area. */
+  align-items: flex-start;
+  align-items: safe center;
+  justify-content: center;
+  padding: 34px clamp(22px, 3.4vw, 44px);
+  background: var(--surface);
+}
+
+.gate__form-wrap {
+  width: min(370px, 100%);
+  display: grid;
+  gap: 18px;
+}
+
+.gate__cardhead h2 {
+  margin: 0 0 6px;
+  font-size: 25px;
+  letter-spacing: -0.02em;
+}
+
+.gate__cardhead p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.gate__form { display: grid; gap: 14px; }
+
+.gate__form .btn { height: 42px; margin-top: 4px; font-weight: 600; }
+
+.gate__error {
+  margin: 0;
+  padding: 9px 11px;
+  border: 1px solid color-mix(in srgb, var(--fail) 32%, transparent);
+  border-radius: var(--radius-sm);
+  background: var(--fail-soft);
+  color: var(--fail);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* input with a leading icon and an optional trailing button */
+.input-shell {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 42px;
+  padding: 0 11px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.input-shell:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.input-shell__icon { color: var(--text-3); flex: none; }
+
+.input-shell input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.input-shell input:focus { outline: none; }
+
+.input-shell__reveal {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  border: 0;
+  border-radius: 5px;
+  background: none;
+  color: var(--text-3);
+  cursor: pointer;
+}
+
+.input-shell__reveal:hover { color: var(--text); background: var(--surface-2); }
+
+/* ---- preview + dev panels ---- */
+
+.gate__preview,
+.gate__dev {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  padding: 13px;
+  display: grid;
+  gap: 11px;
+}
+
+.gate__preview { border-color: color-mix(in srgb, var(--warn) 40%, transparent); }
+
+.gate__previewhead,
+.gate__devhead { display: grid; gap: 7px; }
+
+.gate__devtag {
+  justify-self: start;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.gate__devtag--warn {
+  background: var(--warn-soft);
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 30%, transparent);
+}
+
+.gate__previewhead p,
+.gate__devhead p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.gate__previewhead code,
+.gate__legal .mono {
+  font-family: var(--mono);
+  font-size: 11.5px;
+}
+
+.gate__accounts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.gate__accounts li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.gate__account { display: grid; gap: 6px; min-width: 0; }
+
+.gate__accountwho { display: grid; gap: 1px; }
+
+.gate__accountwho strong { font-size: 12.5px; font-weight: 600; }
+
+.gate__accountwho span { font-size: 11px; color: var(--text-3); }
+
+.gate__creds { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.gate__creds code {
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.gate__legal {
+  margin: 0;
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--text-3);
+}
+
+/* ---- entrance motion ---- */
+
+.gate__brandmark,
+.scene,
+.gate__splashfoot,
+.gate__cardhead,
+.gate__form,
+.gate__preview,
+.gate__dev {
+  animation: gate-rise 620ms cubic-bezier(0.22, 0.68, 0.28, 1) backwards;
+}
+
+.gate__brandmark   { animation-delay: 120ms; }
+.scene             { animation-delay: 200ms; }
+.gate__splashfoot  { animation-delay: 280ms; }
+.gate__cardhead    { animation-delay: 240ms; }
+.gate__form        { animation-delay: 320ms; }
+.gate__preview     { animation-delay: 390ms; }
+.gate__dev         { animation-delay: 440ms; }
+
+@keyframes gate-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* On a normal desktop viewport the card fits the screen and the form column
+   scrolls inside it, rather than the portal name falling below the fold. */
+@media (min-width: 861px) {
+  /* minmax(0,1fr) stops the taller column from setting the row height and
+     overflowing the card; the form column scrolls inside instead. */
+  .gate__card {
+    max-height: calc(100dvh - 56px);
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .gate__splash { min-height: 0; }
+
+  .gate__panel {
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+  }
+
+  .gate__panel::-webkit-scrollbar { width: 8px; }
+  .gate__panel::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 8px;
+  }
+}
+
+/* ------------------------------------------------------- preview banner --- */
+
+.preview-bar {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  padding: 10px 14px;
+  border: 1px solid color-mix(in srgb, var(--warn) 34%, transparent);
+  border-radius: var(--radius);
+  background: var(--warn-soft);
+  color: var(--warn);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.preview-bar strong { font-weight: 700; }
+
+.preview-bar span { color: color-mix(in srgb, var(--warn) 84%, var(--text)); }
+
+.preview-bar code { font-family: var(--mono); font-size: 11.5px; }
+
+/* ------------------------------------------------- mobile nav affordances -- */
+
+.menu-btn {
+  display: none;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 1.8px;
+  border-radius: 2px;
+  background: var(--text);
+  transform: translateX(-50%);
+}
+
+.menu-btn span { top: 50%; margin-top: -0.9px; }
+.menu-btn span::before { content: ''; top: -5.5px; }
+.menu-btn span::after { content: ''; top: 5.5px; }
+
+.topbar__text { min-width: 0; flex: 1 1 260px; }
+
+.topbar__actions { display: flex; align-items: center; gap: 8px; }
+
+.scrim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  border: 0;
+  padding: 0;
+  background: rgb(6 9 14 / 52%);
+  backdrop-filter: blur(1.5px);
+  cursor: pointer;
+}
+
+/* =============================================================== responsive */
+
+@media (max-width: 1000px) {
+  .gate__card { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr); }
+  .gate__splash { min-height: 520px; padding: 26px 24px 30px; }
+}
+
+/* The card stacks: splash on top, form under it. */
+@media (max-width: 860px) {
+  .gate { padding: 0; place-items: stretch; }
+
+  .gate__card {
+    width: 100%;
+    grid-template-columns: 1fr;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .gate__splash {
+    min-height: 0;
+    padding: 54px 24px 30px;
+    gap: 14px;
+  }
+
+  .gate__portal { max-width: 100%; font-size: clamp(27px, 7.4vw, 38px); }
+  .gate__school { max-width: 100%; }
+
+  .scene { min-height: 200px; }
+
+  .gate__panel { padding: 28px 20px 48px; }
+
+  .gate__form-wrap { width: min(420px, 100%); }
+
+  .gate__theme { top: 14px; right: 14px; }
+}
+
+/* Below this the 3D scene costs more room than it earns. */
+@media (max-width: 560px) {
+  .scene { display: none; }
+  .gate__splash { padding: 48px 20px 26px; }
+}
+
+/* The sidebar becomes a drawer. */
+@media (max-width: 900px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: min(282px, 84vw);
+    height: 100dvh;
+    overflow-y: auto;
+    transform: translateX(-102%);
+    transition: transform 220ms cubic-bezier(0.3, 0.7, 0.3, 1);
+    box-shadow: 0 0 40px rgb(0 0 0 / 45%);
+  }
+
+  .app--menu .sidebar { transform: none; }
+  .app--menu .scrim { display: block; }
+
+  .menu-btn { display: block; }
+
+  .topbar {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 12px 18px;
+  }
+
+  /* Title, burger and toggle share one row rather than wrapping. */
+  .topbar__text { flex: 1 1 auto; }
+
+  .topbar__text h1 {
+    font-size: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .topbar__text p { display: none; }
+
+  .content { padding-left: 18px; padding-right: 18px; }
+}
+
+@media (max-width: 720px) {
+  /* Wide tables scroll inside their card rather than the page going sideways. */
+  .card__body { overflow-x: auto; }
+  .table { min-width: 620px; }
+
+  .controls { flex-wrap: wrap; }
+  .card__head { flex-direction: column; align-items: flex-start; gap: 10px; }
+
+  .gate__accounts li { flex-direction: column; align-items: stretch; gap: 10px; }
+  .gate__accounts .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  .content { padding-left: 14px; padding-right: 14px; }
+  .topbar { padding: 10px 14px; }
+  .theme-toggle__text { display: none; }
+  .theme-toggle { padding: 0 9px; }
+  .gate__facts { gap: 10px 22px; }
+}
+
+/* Motion is decoration here: honour the system setting. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* print -------------------------------------------------------------------- */
 
 @media print {
-  .sidebar, .topbar .controls, .backlink, .btn, .no-print { display: none !important; }
+  .sidebar, .topbar .controls, .topbar__actions, .menu-btn, .scrim, .backlink, .btn, .no-print { display: none !important; }
   .app { grid-template-columns: 1fr; }
   .card { box-shadow: none; break-inside: avoid; }
   body { background: #fff; }

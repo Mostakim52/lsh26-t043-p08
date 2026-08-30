@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <title>Result Processing &amp; GPA Engine</title>
+    <meta
+      name="description"
+      content="Teacher Result Portal: result processing and GPA engine — grade points, GPA, letter grades and the reasoning behind every result."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo.svg" />
+    <title>Teacher Result Portal</title>
+    <script>
+      // Apply the saved theme before first paint, or the page flashes the wrong
+      // one on reload. Mirrors src/lib/theme.ts - keep the key in step.
+      try {
+        var t = localStorage.getItem('gpa-console.theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        /* storage blocked: fall back to the system theme */
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
