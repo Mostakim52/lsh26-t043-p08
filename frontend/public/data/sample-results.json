@@ -1,0 +1,2915 @@
+{
+  "meta": {
+    "school": "Shaheed Smrity Higher Secondary School",
+    "exam": "Annual Examination",
+    "session": "2025-2026",
+    "generatedAt": "2026-08-30",
+    "seed": 20260830
+  },
+  "classes": [
+    {
+      "id": "c9a",
+      "name": "Class 9 - Section A",
+      "session": "2025-2026"
+    },
+    {
+      "id": "c10a",
+      "name": "Class 10 - Section A",
+      "session": "2025-2026"
+    }
+  ],
+  "subjects": [
+    {
+      "code": "BAN",
+      "name": "Bangla",
+      "hasPractical": false,
+      "kind": "compulsory"
+    },
+    {
+      "code": "ENG",
+      "name": "English",
+      "hasPractical": false,
+      "kind": "compulsory"
+    },
+    {
+      "code": "MAT",
+      "name": "Mathematics",
+      "hasPractical": false,
+      "kind": "compulsory"
+    },
+    {
+      "code": "PHY",
+      "name": "Physics",
+      "hasPractical": true,
+      "kind": "compulsory"
+    },
+    {
+      "code": "CHE",
+      "name": "Chemistry",
+      "hasPractical": true,
+      "kind": "compulsory"
+    },
+    {
+      "code": "ICT",
+      "name": "Information and Communication Technology",
+      "hasPractical": true,
+      "kind": "compulsory"
+    },
+    {
+      "code": "HMT",
+      "name": "Higher Mathematics",
+      "hasPractical": true,
+      "kind": "optional"
+    },
+    {
+      "code": "BIO",
+      "name": "Biology",
+      "hasPractical": true,
+      "kind": "optional"
+    },
+    {
+      "code": "ECO",
+      "name": "Economics",
+      "hasPractical": false,
+      "kind": "optional"
+    }
+  ],
+  "students": [
+    {
+      "id": "C9A-01",
+      "roll": 1,
+      "name": "Arif Haque",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 57,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 57,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 57,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 43,
+          "practical": 15
+        },
+        {
+          "code": "CHE",
+          "theory": 39,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 47,
+          "practical": 15
+        },
+        {
+          "code": "HMT",
+          "theory": 48,
+          "practical": 18
+        }
+      ]
+    },
+    {
+      "id": "C9A-02",
+      "roll": 2,
+      "name": "Rifat Karim",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 31,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 40,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 38,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 30,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 34,
+          "practical": 11
+        },
+        {
+          "code": "ICT",
+          "theory": 28,
+          "practical": 9
+        },
+        {
+          "code": "BIO",
+          "theory": 23,
+          "practical": 11
+        }
+      ]
+    },
+    {
+      "id": "C9A-03",
+      "roll": 3,
+      "name": "Tahmina Akter",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 88,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 85,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 92,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 68,
+          "practical": 22
+        },
+        {
+          "code": "CHE",
+          "theory": 22,
+          "practical": 20
+        },
+        {
+          "code": "ICT",
+          "theory": 70,
+          "practical": 23
+        },
+        {
+          "code": "HMT",
+          "theory": 66,
+          "practical": 21
+        }
+      ],
+      "edgeCase": "Strong average, one failed compulsory subject. Chemistry theory 22 / 75 misses the pass mark of 25, so a 4.67 average is cancelled to 0.00 F."
+    },
+    {
+      "id": "C9A-04",
+      "roll": 4,
+      "name": "Afsana Khatun",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 39,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 39,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 40,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 34,
+          "practical": 10
+        },
+        {
+          "code": "CHE",
+          "theory": 36,
+          "practical": 12
+        },
+        {
+          "code": "ICT",
+          "theory": 27,
+          "practical": 10
+        },
+        {
+          "code": "BIO",
+          "theory": 39,
+          "practical": 14
+        }
+      ]
+    },
+    {
+      "id": "C9A-05",
+      "roll": 5,
+      "name": "Rubaiya Khatun",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 75,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 72,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 72,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 55,
+          "practical": 17
+        },
+        {
+          "code": "CHE",
+          "theory": 54,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 62,
+          "practical": 22
+        },
+        {
+          "code": "HMT",
+          "theory": 62,
+          "practical": 23
+        }
+      ]
+    },
+    {
+      "id": "C9A-06",
+      "roll": 6,
+      "name": "Jannatul Siddique",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 40,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 35,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 32,
+          "practical": 13
+        },
+        {
+          "code": "CHE",
+          "theory": 27,
+          "practical": 10
+        },
+        {
+          "code": "ICT",
+          "theory": 30,
+          "practical": 11
+        },
+        {
+          "code": "HMT",
+          "theory": 22,
+          "practical": 8
+        }
+      ]
+    },
+    {
+      "id": "C9A-07",
+      "roll": 7,
+      "name": "Shahriar Alam",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 48,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 32,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 40,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 31,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 36,
+          "practical": 13
+        },
+        {
+          "code": "ICT",
+          "theory": 34,
+          "practical": 14
+        },
+        {
+          "code": "BIO",
+          "theory": 34,
+          "practical": 11
+        }
+      ]
+    },
+    {
+      "id": "C9A-08",
+      "roll": 8,
+      "name": "Imran Talukder",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 53,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 62,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 65,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 48,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 43,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 48,
+          "practical": 16
+        },
+        {
+          "code": "BIO",
+          "theory": 50,
+          "practical": 19
+        }
+      ]
+    },
+    {
+      "id": "C9A-09",
+      "roll": 9,
+      "name": "Mehedi Sultana",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 52,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 48,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 36,
+          "practical": 14
+        },
+        {
+          "code": "CHE",
+          "theory": 40,
+          "practical": 16
+        },
+        {
+          "code": "ICT",
+          "theory": 39,
+          "practical": 15
+        },
+        {
+          "code": "HMT",
+          "theory": 41,
+          "practical": 16
+        }
+      ]
+    },
+    {
+      "id": "C9A-10",
+      "roll": 10,
+      "name": "Nayeem Hossain",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 72,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 68,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 75,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 58,
+          "practical": 6
+        },
+        {
+          "code": "CHE",
+          "theory": 55,
+          "practical": 19
+        },
+        {
+          "code": "ICT",
+          "theory": 60,
+          "practical": 20
+        },
+        {
+          "code": "BIO",
+          "theory": 57,
+          "practical": 18
+        }
+      ],
+      "edgeCase": "Practical fail with a passing theory mark. Physics theory 58 / 75 passed but practical 6 / 25 did not, which fails the subject."
+    },
+    {
+      "id": "C9A-11",
+      "roll": 11,
+      "name": "Maisha Talukder",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 45,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 46,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 43,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 39,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 35,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 36,
+          "practical": 15
+        },
+        {
+          "code": "HMT",
+          "theory": 28,
+          "practical": 10
+        }
+      ]
+    },
+    {
+      "id": "C9A-12",
+      "roll": 12,
+      "name": "Marzia Islam",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 61,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 61,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 45,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 42,
+          "practical": 16
+        },
+        {
+          "code": "CHE",
+          "theory": 38,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 38,
+          "practical": 12
+        },
+        {
+          "code": "HMT",
+          "theory": 37,
+          "practical": 14
+        }
+      ]
+    },
+    {
+      "id": "C9A-13",
+      "roll": 13,
+      "name": "Sumaiya Rahman",
+      "classId": "c9a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 66,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 71,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 62,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 52,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 50,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 55,
+          "practical": 19
+        },
+        {
+          "code": "ECO",
+          "theory": 44,
+          "practical": null
+        }
+      ],
+      "edgeCase": "Optional subject exactly on the line. Economics 44 / 100 gives grade point 2.00, and max(0, 2.00 - 2) = 0, so it adds nothing."
+    },
+    {
+      "id": "C9A-14",
+      "roll": 14,
+      "name": "Shirin Ahmed",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 41,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 29,
+          "practical": 10
+        },
+        {
+          "code": "CHE",
+          "theory": 34,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 29,
+          "practical": 10
+        },
+        {
+          "code": "HMT",
+          "theory": 28,
+          "practical": 9
+        }
+      ]
+    },
+    {
+      "id": "C9A-15",
+      "roll": 15,
+      "name": "Fahim Uddin",
+      "classId": "c9a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 75,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 70,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 68,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 47,
+          "practical": 17
+        },
+        {
+          "code": "CHE",
+          "theory": 47,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 58,
+          "practical": 19
+        },
+        {
+          "code": "ECO",
+          "theory": 67,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C9A-16",
+      "roll": 16,
+      "name": "Israt Akter",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 66,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 70,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 73,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 54,
+          "practical": 19
+        },
+        {
+          "code": "CHE",
+          "theory": 45,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 45,
+          "practical": 18
+        },
+        {
+          "code": "HMT",
+          "theory": 55,
+          "practical": 17
+        }
+      ]
+    },
+    {
+      "id": "C9A-17",
+      "roll": 17,
+      "name": "Tanvir Hossain",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 58,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 72,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 65,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 51,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 45,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 54,
+          "practical": 17
+        },
+        {
+          "code": "HMT",
+          "theory": 53,
+          "practical": 21
+        }
+      ]
+    },
+    {
+      "id": "C9A-18",
+      "roll": 18,
+      "name": "Nayeem Mondal",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 69,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 76,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 65,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 51,
+          "practical": 17
+        },
+        {
+          "code": "CHE",
+          "theory": 50,
+          "practical": 16
+        },
+        {
+          "code": "ICT",
+          "theory": 47,
+          "practical": 15
+        },
+        {
+          "code": "HMT",
+          "theory": 55,
+          "practical": 18
+        }
+      ]
+    },
+    {
+      "id": "C9A-19",
+      "roll": 19,
+      "name": "Mizanur Bhuiyan",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 61,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 47,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 61,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 37,
+          "practical": 16
+        },
+        {
+          "code": "CHE",
+          "theory": 40,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 40,
+          "practical": 14
+        },
+        {
+          "code": "BIO",
+          "theory": 37,
+          "practical": 13
+        }
+      ]
+    },
+    {
+      "id": "C9A-20",
+      "roll": 20,
+      "name": "Israt Rahman",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 84,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 75,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 71,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 55,
+          "practical": 21
+        },
+        {
+          "code": "CHE",
+          "theory": 60,
+          "practical": 23
+        },
+        {
+          "code": "ICT",
+          "theory": 54,
+          "practical": 21
+        },
+        {
+          "code": "HMT",
+          "theory": 59,
+          "practical": 22
+        }
+      ]
+    },
+    {
+      "id": "C9A-21",
+      "roll": 21,
+      "name": "Nusrat Biswas",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 41,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 38,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 27,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 29,
+          "practical": 11
+        },
+        {
+          "code": "ICT",
+          "theory": 26,
+          "practical": 10
+        },
+        {
+          "code": "HMT",
+          "theory": 33,
+          "practical": 14
+        }
+      ]
+    },
+    {
+      "id": "C9A-22",
+      "roll": 22,
+      "name": "Rakib Islam",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 74,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 69,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 81,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 60,
+          "practical": 20
+        },
+        {
+          "code": "CHE",
+          "theory": 58,
+          "practical": 19
+        },
+        {
+          "code": "ICT",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        },
+        {
+          "code": "HMT",
+          "theory": 62,
+          "practical": 21
+        }
+      ],
+      "edgeCase": "Absent in a compulsory subject. AB in ICT cancels a 4.08 average to 0.00 F."
+    },
+    {
+      "id": "C9A-23",
+      "roll": 23,
+      "name": "Tasnim Ahmed",
+      "classId": "c9a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 32,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 43,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 38,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 24,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 35,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 31,
+          "practical": 13
+        },
+        {
+          "code": "ECO",
+          "theory": 39,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C9A-24",
+      "roll": 24,
+      "name": "Jubayer Uddin",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 49,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 35,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 25,
+          "practical": 8
+        },
+        {
+          "code": "CHE",
+          "theory": 28,
+          "practical": 10
+        },
+        {
+          "code": "ICT",
+          "theory": 31,
+          "practical": 12
+        },
+        {
+          "code": "HMT",
+          "theory": 34,
+          "practical": 10
+        }
+      ]
+    },
+    {
+      "id": "C9A-25",
+      "roll": 25,
+      "name": "Sharmin Chowdhury",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 41,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 39,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 36,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 28,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        },
+        {
+          "code": "ICT",
+          "theory": 23,
+          "practical": 10
+        },
+        {
+          "code": "HMT",
+          "theory": 23,
+          "practical": 9
+        }
+      ]
+    },
+    {
+      "id": "C9A-26",
+      "roll": 26,
+      "name": "Nusrat Jahan Mim",
+      "classId": "c9a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 70,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 66,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 72,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 55,
+          "practical": 19
+        },
+        {
+          "code": "CHE",
+          "theory": 52,
+          "practical": 18
+        },
+        {
+          "code": "ICT",
+          "theory": 61,
+          "practical": 20
+        },
+        {
+          "code": "BIO",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        }
+      ],
+      "edgeCase": "Absent in the optional subject. Biology AB contributes 0 but does not cancel the result, so the GPA stands at 4.08."
+    },
+    {
+      "id": "C9A-27",
+      "roll": 27,
+      "name": "Jannatul Khatun",
+      "classId": "c9a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 58,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 56,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 55,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 36,
+          "practical": 15
+        },
+        {
+          "code": "CHE",
+          "theory": 43,
+          "practical": 16
+        },
+        {
+          "code": "ICT",
+          "theory": 39,
+          "practical": 13
+        },
+        {
+          "code": "ECO",
+          "theory": 49,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C9A-28",
+      "roll": 28,
+      "name": "Sumaiya Alam",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 88,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 85,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 89,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 61,
+          "practical": 21
+        },
+        {
+          "code": "CHE",
+          "theory": 60,
+          "practical": 21
+        },
+        {
+          "code": "ICT",
+          "theory": 66,
+          "practical": 22
+        },
+        {
+          "code": "HMT",
+          "theory": 66,
+          "practical": 21
+        }
+      ]
+    },
+    {
+      "id": "C9A-29",
+      "roll": 29,
+      "name": "Nayeem Uddin",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 62,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 62,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 37,
+          "practical": 15
+        },
+        {
+          "code": "CHE",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        },
+        {
+          "code": "ICT",
+          "theory": 40,
+          "practical": 16
+        },
+        {
+          "code": "HMT",
+          "theory": 38,
+          "practical": 12
+        }
+      ]
+    },
+    {
+      "id": "C9A-30",
+      "roll": 30,
+      "name": "Ayesha Haque",
+      "classId": "c9a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 74,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 59,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 64,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 50,
+          "practical": 19
+        },
+        {
+          "code": "CHE",
+          "theory": 50,
+          "practical": 18
+        },
+        {
+          "code": "ICT",
+          "theory": 55,
+          "practical": 19
+        },
+        {
+          "code": "ECO",
+          "theory": 63,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C9A-31",
+      "roll": 31,
+      "name": "Israt Haque",
+      "classId": "c9a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 98,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 89,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 100,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 71,
+          "practical": 24
+        },
+        {
+          "code": "CHE",
+          "theory": 67,
+          "practical": 23
+        },
+        {
+          "code": "ICT",
+          "theory": 73,
+          "practical": 25
+        },
+        {
+          "code": "HMT",
+          "theory": 69,
+          "practical": 24
+        }
+      ]
+    },
+    {
+      "id": "C9A-32",
+      "roll": 32,
+      "name": "Fahim Mondal",
+      "classId": "c9a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 67,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 68,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 62,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 43,
+          "practical": 15
+        },
+        {
+          "code": "CHE",
+          "theory": 51,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 43,
+          "practical": 14
+        },
+        {
+          "code": "ECO",
+          "theory": 68,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C10A-01",
+      "roll": 1,
+      "name": "Mehedi Hasan",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 71,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 69,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 46,
+          "practical": 17
+        },
+        {
+          "code": "CHE",
+          "theory": 42,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 38,
+          "practical": 13
+        },
+        {
+          "code": "ECO",
+          "theory": 47,
+          "practical": null
+        }
+      ],
+      "edgeCase": "The other side of the boundary. 20.50 / 6 = 3.4167, rounded to 3.42, which is B and not A-."
+    },
+    {
+      "id": "C10A-02",
+      "roll": 2,
+      "name": "Sazzad Haque",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 29,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 23,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 25,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 21,
+          "practical": 8
+        },
+        {
+          "code": "CHE",
+          "theory": 28,
+          "practical": 9
+        },
+        {
+          "code": "ICT",
+          "theory": 25,
+          "practical": 11
+        },
+        {
+          "code": "BIO",
+          "theory": 15,
+          "practical": 5
+        }
+      ]
+    },
+    {
+      "id": "C10A-03",
+      "roll": 3,
+      "name": "Marzia Sarker",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 43,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 46,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 54,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 29,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 40,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 35,
+          "practical": 12
+        },
+        {
+          "code": "HMT",
+          "theory": 34,
+          "practical": 14
+        }
+      ]
+    },
+    {
+      "id": "C10A-04",
+      "roll": 4,
+      "name": "Sohel Biswas",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 35,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 42,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 48,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 36,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 32,
+          "practical": 12
+        },
+        {
+          "code": "ICT",
+          "theory": 35,
+          "practical": 13
+        },
+        {
+          "code": "BIO",
+          "theory": 36,
+          "practical": 14
+        }
+      ]
+    },
+    {
+      "id": "C10A-05",
+      "roll": 5,
+      "name": "Sazzad Hossain",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 82,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 84,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 95,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 70,
+          "practical": 23
+        },
+        {
+          "code": "CHE",
+          "theory": 68,
+          "practical": 22
+        },
+        {
+          "code": "ICT",
+          "theory": 72,
+          "practical": 24
+        },
+        {
+          "code": "HMT",
+          "theory": 71,
+          "practical": 23
+        }
+      ],
+      "edgeCase": "GPA cap. (30.00 + 3.00) / 6 = 5.50, held at 5.00 for A+."
+    },
+    {
+      "id": "C10A-06",
+      "roll": 6,
+      "name": "Habibur Rahman",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 35,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 41,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 33,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 30,
+          "practical": 10
+        },
+        {
+          "code": "CHE",
+          "theory": 25,
+          "practical": 8
+        },
+        {
+          "code": "ICT",
+          "theory": 28,
+          "practical": 12
+        },
+        {
+          "code": "ECO",
+          "theory": 35,
+          "practical": null
+        }
+      ],
+      "edgeCase": "Component pass marks exactly met. Chemistry 25 / 75 theory and 8 / 25 practical is a pass at 33, grade point 1.00."
+    },
+    {
+      "id": "C10A-07",
+      "roll": 7,
+      "name": "Imran Haque",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 33,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 39,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 37,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 34,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 29,
+          "practical": 10
+        },
+        {
+          "code": "ICT",
+          "theory": 25,
+          "practical": 8
+        },
+        {
+          "code": "ECO",
+          "theory": 37,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C10A-08",
+      "roll": 8,
+      "name": "Rasel Ahmed",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 80,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 76,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 77,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 69,
+          "practical": 24
+        },
+        {
+          "code": "CHE",
+          "theory": 56,
+          "practical": 20
+        },
+        {
+          "code": "ICT",
+          "theory": 67,
+          "practical": 25
+        },
+        {
+          "code": "BIO",
+          "theory": 59,
+          "practical": 20
+        }
+      ]
+    },
+    {
+      "id": "C10A-09",
+      "roll": 9,
+      "name": "Afsana Sarker",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 87,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 90,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 77,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 70,
+          "practical": 25
+        },
+        {
+          "code": "CHE",
+          "theory": 69,
+          "practical": 24
+        },
+        {
+          "code": "ICT",
+          "theory": 61,
+          "practical": 21
+        },
+        {
+          "code": "HMT",
+          "theory": 70,
+          "practical": 23
+        }
+      ]
+    },
+    {
+      "id": "C10A-10",
+      "roll": 10,
+      "name": "Farzana Bhuiyan",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 49,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 52,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 35,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 36,
+          "practical": 12
+        },
+        {
+          "code": "ICT",
+          "theory": 43,
+          "practical": 16
+        },
+        {
+          "code": "HMT",
+          "theory": 47,
+          "practical": 15
+        }
+      ]
+    },
+    {
+      "id": "C10A-11",
+      "roll": 11,
+      "name": "Marzia Sultana",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 68,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 64,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        },
+        {
+          "code": "PHY",
+          "theory": 50,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 48,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 52,
+          "practical": 19
+        },
+        {
+          "code": "ECO",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        }
+      ],
+      "edgeCase": "Absent twice. AB in compulsory Mathematics and in the optional Economics, so the student lands on both the absent list and the optional list."
+    },
+    {
+      "id": "C10A-12",
+      "roll": 12,
+      "name": "Farzana Yeasmin",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 73,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 64,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 61,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 45,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 44,
+          "practical": 17
+        },
+        {
+          "code": "ICT",
+          "theory": 40,
+          "practical": 15
+        },
+        {
+          "code": "ECO",
+          "theory": 40,
+          "practical": null
+        }
+      ],
+      "edgeCase": "Letter grade boundary. The GPA lands on exactly 3.50, the first point of A- rather than the last of B."
+    },
+    {
+      "id": "C10A-13",
+      "roll": 13,
+      "name": "Fahim Hossain",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 49,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 62,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 47,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 43,
+          "practical": 17
+        },
+        {
+          "code": "CHE",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        },
+        {
+          "code": "ICT",
+          "theory": 43,
+          "practical": 16
+        },
+        {
+          "code": "BIO",
+          "theory": 34,
+          "practical": 15
+        }
+      ]
+    },
+    {
+      "id": "C10A-14",
+      "roll": 14,
+      "name": "Tanvir Chowdhury",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 57,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 54,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 44,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 37,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 37,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 35,
+          "practical": 11
+        },
+        {
+          "code": "ECO",
+          "theory": null,
+          "practical": null,
+          "absent": true
+        }
+      ]
+    },
+    {
+      "id": "C10A-15",
+      "roll": 15,
+      "name": "Sanjida Biswas",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 41,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 44,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 45,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 37,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 40,
+          "practical": 13
+        },
+        {
+          "code": "ICT",
+          "theory": 33,
+          "practical": 14
+        },
+        {
+          "code": "ECO",
+          "theory": 52,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C10A-16",
+      "roll": 16,
+      "name": "Israt Islam",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 71,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 70,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 50,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 56,
+          "practical": 21
+        },
+        {
+          "code": "ICT",
+          "theory": 49,
+          "practical": 19
+        },
+        {
+          "code": "BIO",
+          "theory": 58,
+          "practical": 20
+        }
+      ]
+    },
+    {
+      "id": "C10A-17",
+      "roll": 17,
+      "name": "Rasel Uddin",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 40,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 52,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 52,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 35,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 28,
+          "practical": 11
+        },
+        {
+          "code": "ICT",
+          "theory": 35,
+          "practical": 14
+        },
+        {
+          "code": "BIO",
+          "theory": 31,
+          "practical": 12
+        }
+      ]
+    },
+    {
+      "id": "C10A-18",
+      "roll": 18,
+      "name": "Nusrat Haque",
+      "classId": "c10a",
+      "optionalCode": "ECO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 41,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 28,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 24,
+          "practical": 11
+        },
+        {
+          "code": "ICT",
+          "theory": 30,
+          "practical": 9
+        },
+        {
+          "code": "ECO",
+          "theory": 42,
+          "practical": null
+        }
+      ]
+    },
+    {
+      "id": "C10A-19",
+      "roll": 19,
+      "name": "Mahmud Hossain",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 42,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 43,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 44,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 36,
+          "practical": 11
+        },
+        {
+          "code": "CHE",
+          "theory": 35,
+          "practical": 12
+        },
+        {
+          "code": "ICT",
+          "theory": 34,
+          "practical": 15
+        },
+        {
+          "code": "BIO",
+          "theory": 36,
+          "practical": 12
+        }
+      ]
+    },
+    {
+      "id": "C10A-20",
+      "roll": 20,
+      "name": "Shirin Khatun",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 23,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 27,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 26,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 19,
+          "practical": 8
+        },
+        {
+          "code": "CHE",
+          "theory": 18,
+          "practical": 8
+        },
+        {
+          "code": "ICT",
+          "theory": 26,
+          "practical": 10
+        },
+        {
+          "code": "BIO",
+          "theory": 21,
+          "practical": 7
+        }
+      ]
+    },
+    {
+      "id": "C10A-21",
+      "roll": 21,
+      "name": "Sazzad Karim",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 55,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 46,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 57,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 39,
+          "practical": 15
+        },
+        {
+          "code": "CHE",
+          "theory": 45,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 38,
+          "practical": 14
+        },
+        {
+          "code": "BIO",
+          "theory": 41,
+          "practical": 17
+        }
+      ]
+    },
+    {
+      "id": "C10A-22",
+      "roll": 22,
+      "name": "Sanjida Chowdhury",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 34,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 37,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 42,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 30,
+          "practical": 12
+        },
+        {
+          "code": "CHE",
+          "theory": 35,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 29,
+          "practical": 12
+        },
+        {
+          "code": "BIO",
+          "theory": 30,
+          "practical": 10
+        }
+      ]
+    },
+    {
+      "id": "C10A-23",
+      "roll": 23,
+      "name": "Ashraful Alam",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 44,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 38,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 29,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 23,
+          "practical": 9
+        },
+        {
+          "code": "CHE",
+          "theory": 24,
+          "practical": 9
+        },
+        {
+          "code": "ICT",
+          "theory": 30,
+          "practical": 12
+        },
+        {
+          "code": "HMT",
+          "theory": 27,
+          "practical": 10
+        }
+      ]
+    },
+    {
+      "id": "C10A-24",
+      "roll": 24,
+      "name": "Kamrul Talukder",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 89,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 88,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 93,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 59,
+          "practical": 21
+        },
+        {
+          "code": "CHE",
+          "theory": 66,
+          "practical": 25
+        },
+        {
+          "code": "ICT",
+          "theory": 65,
+          "practical": 23
+        },
+        {
+          "code": "HMT",
+          "theory": 59,
+          "practical": 21
+        }
+      ]
+    },
+    {
+      "id": "C10A-25",
+      "roll": 25,
+      "name": "Israt Jahan",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 63,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 58,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 66,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 21,
+          "practical": 20
+        },
+        {
+          "code": "CHE",
+          "theory": 50,
+          "practical": 18
+        },
+        {
+          "code": "ICT",
+          "theory": 54,
+          "practical": 19
+        },
+        {
+          "code": "BIO",
+          "theory": 58,
+          "practical": 20
+        }
+      ],
+      "edgeCase": "Theory fail with a passing practical. Physics practical 20 / 25 passed, theory 21 / 75 did not. No checking list catches this one, which is why the trace matters."
+    },
+    {
+      "id": "C10A-26",
+      "roll": 26,
+      "name": "Nusrat Uddin",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 56,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 55,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 43,
+          "practical": 14
+        },
+        {
+          "code": "CHE",
+          "theory": 43,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 37,
+          "practical": 15
+        },
+        {
+          "code": "HMT",
+          "theory": 37,
+          "practical": 14
+        }
+      ]
+    },
+    {
+      "id": "C10A-27",
+      "roll": 27,
+      "name": "Arif Mahmud",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 76,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 70,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 79,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 62,
+          "practical": 21
+        },
+        {
+          "code": "CHE",
+          "theory": 59,
+          "practical": 20
+        },
+        {
+          "code": "ICT",
+          "theory": 65,
+          "practical": 22
+        },
+        {
+          "code": "HMT",
+          "theory": 55,
+          "practical": 5
+        }
+      ],
+      "edgeCase": "Practical fail in the optional subject. Higher Mathematics practical 5 / 25 zeroes the optional, but the compulsory six still carry a 4.33."
+    },
+    {
+      "id": "C10A-28",
+      "roll": 28,
+      "name": "Nayeem Khatun",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 64,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 65,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 59,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 49,
+          "practical": 17
+        },
+        {
+          "code": "CHE",
+          "theory": 52,
+          "practical": 20
+        },
+        {
+          "code": "ICT",
+          "theory": 45,
+          "practical": 17
+        },
+        {
+          "code": "BIO",
+          "theory": 52,
+          "practical": 20
+        }
+      ]
+    },
+    {
+      "id": "C10A-29",
+      "roll": 29,
+      "name": "Ayesha Bhuiyan",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 21,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 21,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 23,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 20,
+          "practical": 7
+        },
+        {
+          "code": "CHE",
+          "theory": 19,
+          "practical": 6
+        },
+        {
+          "code": "ICT",
+          "theory": 19,
+          "practical": 10
+        },
+        {
+          "code": "HMT",
+          "theory": 24,
+          "practical": 10
+        }
+      ]
+    },
+    {
+      "id": "C10A-30",
+      "roll": 30,
+      "name": "Shirin Islam",
+      "classId": "c10a",
+      "optionalCode": "HMT",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 60,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 59,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 69,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 53,
+          "practical": 18
+        },
+        {
+          "code": "CHE",
+          "theory": 44,
+          "practical": 14
+        },
+        {
+          "code": "ICT",
+          "theory": 52,
+          "practical": 19
+        },
+        {
+          "code": "HMT",
+          "theory": 49,
+          "practical": 16
+        }
+      ]
+    },
+    {
+      "id": "C10A-31",
+      "roll": 31,
+      "name": "Mizanur Akter",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 75,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 86,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 85,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 62,
+          "practical": 20
+        },
+        {
+          "code": "CHE",
+          "theory": 69,
+          "practical": 24
+        },
+        {
+          "code": "ICT",
+          "theory": 69,
+          "practical": 22
+        },
+        {
+          "code": "BIO",
+          "theory": 60,
+          "practical": 22
+        }
+      ]
+    },
+    {
+      "id": "C10A-32",
+      "roll": 32,
+      "name": "Rasel Haque",
+      "classId": "c10a",
+      "optionalCode": "BIO",
+      "marks": [
+        {
+          "code": "BAN",
+          "theory": 51,
+          "practical": null
+        },
+        {
+          "code": "ENG",
+          "theory": 56,
+          "practical": null
+        },
+        {
+          "code": "MAT",
+          "theory": 51,
+          "practical": null
+        },
+        {
+          "code": "PHY",
+          "theory": 39,
+          "practical": 16
+        },
+        {
+          "code": "CHE",
+          "theory": 38,
+          "practical": 15
+        },
+        {
+          "code": "ICT",
+          "theory": 46,
+          "practical": 16
+        },
+        {
+          "code": "BIO",
+          "theory": 45,
+          "practical": 17
+        }
+      ]
+    }
+  ]
+}
