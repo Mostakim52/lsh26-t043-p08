@@ -14,7 +14,16 @@ services:
     runtime: node
     plan: free
     rootDir: backend
-    buildCommand: npm install && npm run build && npx prisma generate
+    # --include=dev is required: NODE_ENV=production below makes npm skip
+    # devDependencies by default, which is where typescript/@types/*/prisma
+    # live - the build would otherwise fail with "implicitly has an any type"
+    # on every Express/Node import.
+    #
+    # prisma generate MUST run before the TypeScript build, not after: tsc
+    # needs @prisma/client's generated types to compile any code that touches
+    # PrismaClient, and on a fresh clone there is no pre-existing generated
+    # client to fall back on.
+    buildCommand: npm ci --include=dev && npx prisma generate && npm run build
     startCommand: npm run start
     envVars:
       - key: NODE_ENV
