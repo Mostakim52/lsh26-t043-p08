@@ -2,6 +2,7 @@
 
 | Field | Value |
 | --- | --- |
+| Team | Parle Theka |
 | Team ID | t043 |
 | Problem ID | p08 |
 | Event start code | LSH26-8490-C900 |
