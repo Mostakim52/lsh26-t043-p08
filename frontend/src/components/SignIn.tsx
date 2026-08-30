@@ -162,9 +162,8 @@ export function SignIn({
                 <div className="gate__previewhead">
                   <span className="gate__devtag gate__devtag--warn">Preview</span>
                   <p>
-                    The backend is not built yet. Log in with <strong>both fields empty</strong> to
-                    walk the whole portal on bundled sample marks. Dev builds only — this disappears
-                    from <code>npm run build</code>.
+                    If the backend is unavailable, log in with <strong>both fields empty</strong> to
+                    walk the whole portal on bundled sample marks. Dev builds only.
                   </p>
                 </div>
                 <button

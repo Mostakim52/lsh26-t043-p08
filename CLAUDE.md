@@ -227,17 +227,19 @@ See **Authentication** below.
 
 Point the frontend at the backend with:
 
-On Windows PowerShell the inline `VAR=value cmd` syntax does not work — put these in
+On Windows PowerShell the inline `VAR=value cmd` syntax does not work — put one line in
 `frontend/.env.local` and run `npm run dev` normally:
 
 ```
-VITE_RESULTS_URL=http://localhost:8000/api/v1/results
-VITE_AUTH_URL=http://localhost:8000/api/v1/auth
+VITE_API_BASE=http://localhost:8000/api/v1
 ```
 
-`frontend/src/lib/api.ts` and `frontend/src/lib/auth.ts` read those two variables and
-change nothing else. Both default to same-origin paths, so a backend that also serves the
-built frontend needs neither.
+Point it at a deployed backend the same way. `frontend/src/lib/config.ts` resolves that
+into the results and auth URLs; nothing else in the app reads the environment. It defaults
+to the same origin (`/api/v1`), so a backend that also serves the built frontend needs no
+configuration at all.
+
+Restart `npm run dev` after editing — Vite reads env at server start, not per request.
 
 ### Next, for marks entry
 
@@ -315,10 +317,14 @@ this file stay in step.
 
 ### Frontend environment variables
 
+Copy `frontend/.env.example` to `frontend/.env.local` and edit. `.env.local` is
+gitignored; `.env.example` is committed, so add any new variable to it too.
+
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `VITE_RESULTS_URL` | `/api/v1/results` | Where marks are fetched from |
-| `VITE_AUTH_URL` | `/api/v1/auth` | Base path of the three auth endpoints |
+| **`VITE_API_BASE`** | `/api/v1` | **Backend base URL — normally the only one you set.** Both endpoints are derived from it |
+| `VITE_RESULTS_URL` | `{VITE_API_BASE}/results` | Override, only if results live somewhere unrelated |
+| `VITE_AUTH_URL` | `{VITE_API_BASE}/auth` | Override, only if auth lives somewhere unrelated |
 | `VITE_PORTAL_NAME` | `Teacher Result Portal` | Headline on the sign-in splash |
 | `VITE_SCHOOL_NAME` | `Shaheed Smrity Higher Secondary School` | Shown under the portal name |
 

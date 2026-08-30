@@ -4,6 +4,7 @@ import { buildChecklists } from './engine/checklists';
 import { evaluateDataset } from './engine';
 import type { Dataset } from './engine/types';
 import { loadDataset } from './lib/api';
+import { PORTAL_NAME as PORTAL, SCHOOL_NAME as SCHOOL } from './lib/config';
 import {
   PREVIEW_ENABLED,
   fetchSession,
@@ -21,9 +22,6 @@ import { TraceView } from './components/TraceView';
 
 export type View = 'overview' | 'students' | 'checklists' | 'rules';
 
-/** Shown on the sign-in splash, before any marks exist to read a name from. */
-const PORTAL = import.meta.env.VITE_PORTAL_NAME ?? 'Teacher Result Portal';
-const SCHOOL = import.meta.env.VITE_SCHOOL_NAME ?? 'Shaheed Smrity Higher Secondary School';
 
 const TITLES: Record<View, { title: string; blurb: string }> = {
   overview: {

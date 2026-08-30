@@ -20,12 +20,14 @@ Then open http://localhost:5173.
 
 > **The backend must be running** for real use. Sign-in is entirely server-side and every
 > student, class, subject and mark is fetched — this app checks no passwords and bundles no
-> cohort of its own. Point it at the backend in `.env.local`:
+> cohort of its own. Point it at the backend with one line in `.env.local`:
 >
 > ```
-> VITE_AUTH_URL=http://localhost:8000/api/v1/auth
-> VITE_RESULTS_URL=http://localhost:8000/api/v1/results
+> VITE_API_BASE=http://localhost:8000/api/v1
 > ```
+>
+> `cp .env.example .env.local` to start; that template documents every variable. Restart
+> `npm run dev` after editing it.
 >
 > The dev-mode panel on the sign-in screen shows the two accounts the backend seeds, and
 > fills the form for you. The full contract is in the repo-root `CLAUDE.md`.
@@ -42,8 +44,9 @@ Then open http://localhost:5173.
 | `npm test` | 28 engine tests, including every seeded edge case |
 | `npm run gen:data` | Regenerates `public/data/sample-results.json` (deterministic) |
 
-Environment variables: `VITE_RESULTS_URL`, `VITE_AUTH_URL`, `VITE_PORTAL_NAME`,
-`VITE_SCHOOL_NAME` — see `src/vite-env.d.ts`.
+Environment variables: `VITE_API_BASE` (the one you normally set), with
+`VITE_RESULTS_URL`, `VITE_AUTH_URL`, `VITE_PORTAL_NAME` and `VITE_SCHOOL_NAME` as
+overrides. All resolved in `src/lib/config.ts`; documented in `.env.example`.
 
 ## The four required items
 

@@ -14,6 +14,8 @@
  * can steal. Full contract in the repo-root CLAUDE.md.
  */
 
+import { AUTH_BASE } from './config';
+
 export interface Teacher {
   username: string;
   name: string;
@@ -21,8 +23,6 @@ export interface Teacher {
   /** Classes this teacher may see. '*' means the whole cohort. */
   scope: string;
 }
-
-const AUTH_BASE = import.meta.env.VITE_AUTH_URL ?? '/api/v1/auth';
 
 /* -------------------------------------------------------------------------- */
 /* TEMPORARY: preview without the backend                                      */

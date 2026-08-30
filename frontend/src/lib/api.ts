@@ -1,14 +1,16 @@
+import { RESULTS_URL } from './config';
 import type { Dataset } from '../engine/types';
 
 /**
  * Where marks come from. **Every student, class, subject and mark is fetched
  * from the backend** — the app ships no cohort of its own and computes nothing
- * from a local file on the normal path.
+ * from a local file on the normal path. The URL is resolved in lib/config.ts
+ * from VITE_API_BASE (see .env.example).
  *
  * `credentials: 'include'` sends the session cookie the backend set at login, so
  * the marks endpoint can refuse an unauthenticated caller.
  */
-const SOURCE = import.meta.env.VITE_RESULTS_URL ?? '/api/v1/results';
+const SOURCE = RESULTS_URL;
 
 /**
  * TEMPORARY, dev builds only: the bundled sample cohort behind the no-backend
