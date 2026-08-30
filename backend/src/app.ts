@@ -24,6 +24,9 @@ export function createApp(): Express {
     }),
   );
   app.use(express.json({ limit: "1mb" }));
+  // CSV import posts the raw file body (Content-Type: text/csv or text/plain),
+  // not JSON - scoped to that one path so every other route keeps strict JSON.
+  app.use("/api/v1/import", express.text({ type: ["text/csv", "text/plain"], limit: "2mb" }));
   app.use(cookieParser());
 
   app.get("/health", (_req, res) => {
