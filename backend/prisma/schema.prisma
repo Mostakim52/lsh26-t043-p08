@@ -1,0 +1,138 @@
+// P08 — School Result Processing and GPA Engine
+//
+// Design notes:
+// - Marks are stored as discrete columns rather than a JSON blob so the
+//   theory/practical split, absence, and whole-paper marks are all real,
+//   queryable fields. The grading rules key off these distinctions.
+// - `isAbsent` is deliberately separate from a score of 0: the specification
+//   requires that an absent student and a student who scored zero do not
+//   produce the same output.
+// - Auth is plain username/password against a small seeded account list
+//   (per the frontend's documented contract in CLAUDE.md) — not a per-user
+//   role on the data itself. TeacherAccount/AuthSession are independent of
+//   the grading data below; a teacher's `scope` filters what a session's
+//   Dataset export includes, it does not gate rows in the database.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  // Direct (non-pooled) connection, used by `prisma migrate`.
+  directUrl = env("DIRECT_URL")
+}
+
+/// A batch of results — one exam sitting for one school.
+model ExamSession {
+  id        String   @id @default(cuid())
+  /// Identifier from the source dataset, e.g. "PUB-01".
+  caseId    String   @unique
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  subjects Subject[]
+  students Student[]
+
+  @@map("exam_sessions")
+}
+
+/// A subject offered within a session.
+/// `hasPractical` drives which mark columns are populated on StudentMark.
+model Subject {
+  id           String  @id @default(cuid())
+  sessionId    String
+  code         String
+  name         String
+  hasPractical Boolean
+  isCompulsory Boolean
+  displayOrder Int
+
+  session            ExamSession   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  marks              StudentMark[]
+  optionalForStudent Student[]
+
+  @@unique([sessionId, code])
+  @@index([sessionId])
+  @@map("subjects")
+}
+
+/// A student sitting one exam session.
+model Student {
+  id                String @id @default(cuid())
+  sessionId         String
+  /// Identifier from the source dataset, e.g. "S001".
+  rollNo            String
+  name              String
+  className         String
+  optionalSubjectId String
+
+  session ExamSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  // Cascade (not the default Restrict): deleting a session cascades into both
+  // `subjects` and `students`, and Postgres checks RESTRICT immediately. With
+  // the default, tearing down a session could fail depending on which cascade
+  // trigger fires first. A subject only ever exists inside its session.
+  optionalSubject Subject       @relation(fields: [optionalSubjectId], references: [id], onDelete: Cascade)
+  marks           StudentMark[]
+
+  @@unique([sessionId, rollNo])
+  @@index([sessionId])
+  @@map("students")
+}
+
+/// One student's mark in one subject.
+///
+/// Exactly one of these shapes is valid, enforced when marks are ingested:
+///   absent            -> isAbsent = true,  all scores null
+///   no practical part -> wholeScore set (0..100), theory/practical null
+///   has practical     -> theoryScore (0..75) and practicalScore (0..25) set
+model StudentMark {
+  id             String  @id @default(cuid())
+  studentId      String
+  subjectId      String
+  isAbsent       Boolean @default(false)
+  wholeScore     Int?
+  theoryScore    Int?
+  practicalScore Int?
+
+  student Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  subject Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+
+  @@unique([studentId, subjectId])
+  @@index([studentId])
+  @@map("student_marks")
+}
+
+/// A seeded office/teacher account. Plain username/password, per the
+/// frontend's documented auth contract — no self-service signup.
+model TeacherAccount {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  name         String
+  /// Free text shown under the name in the sidebar, e.g. "Exam controller".
+  role         String
+  /// "*" for the whole cohort, or a classId to scope /results server-side.
+  scope        String
+  createdAt    DateTime @default(now())
+
+  sessions AuthSession[]
+
+  @@map("teacher_accounts")
+}
+
+/// A logged-in session. The cookie holds the raw token; only its SHA-256
+/// hash is stored, so a database leak alone can't be replayed as a session.
+model AuthSession {
+  tokenHash String   @id
+  teacherId String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  teacher TeacherAccount @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+
+  @@index([teacherId])
+  @@map("auth_sessions")
+}

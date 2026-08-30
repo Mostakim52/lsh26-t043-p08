@@ -1,0 +1,5392 @@
+{
+  "schema_version": "2.1",
+  "problem_id": "P08",
+  "source": "P08_school_results_public.json (cases PUB-01..PUB-03)",
+  "cases": [
+    {
+      "case_id": "PUB-01",
+      "subjects": [
+        {
+          "code": "BAN",
+          "name": "Bangla",
+          "practical": false
+        },
+        {
+          "code": "ENG",
+          "name": "English",
+          "practical": false
+        },
+        {
+          "code": "MAT",
+          "name": "Mathematics",
+          "practical": false
+        },
+        {
+          "code": "PHY",
+          "name": "Physics",
+          "practical": true
+        },
+        {
+          "code": "CHE",
+          "name": "Chemistry",
+          "practical": true
+        },
+        {
+          "code": "BIO",
+          "name": "Biology",
+          "practical": true
+        },
+        {
+          "code": "HMT",
+          "name": "Higher Mathematics",
+          "practical": true
+        },
+        {
+          "code": "AGR",
+          "name": "Agriculture",
+          "practical": true
+        },
+        {
+          "code": "REL",
+          "name": "Religion",
+          "practical": false
+        }
+      ],
+      "compulsory": [
+        "BAN",
+        "ENG",
+        "MAT",
+        "PHY",
+        "CHE",
+        "BIO"
+      ],
+      "students": [
+        {
+          "id": "S001",
+          "name": "Kamal Begum",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 75,
+            "ENG": 69,
+            "MAT": 84,
+            "PHY": {
+              "theory": 52,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 54,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 64,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 56,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S002",
+          "name": "Lamia Islam",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 50,
+            "ENG": 48,
+            "MAT": 39,
+            "PHY": {
+              "theory": 21,
+              "practical": 6
+            },
+            "CHE": {
+              "theory": 30,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 24,
+              "practical": 14
+            },
+            "AGR": {
+              "theory": 27,
+              "practical": 9
+            }
+          }
+        },
+        {
+          "id": "S003",
+          "name": "Urmi Akter",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 90,
+            "ENG": 77,
+            "MAT": 96,
+            "PHY": {
+              "theory": 58,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 74,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 75,
+              "practical": 24
+            },
+            "AGR": {
+              "theory": 66,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S004",
+          "name": "Imran Sultana",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 83,
+            "ENG": 100,
+            "MAT": 32,
+            "PHY": {
+              "theory": 75,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 70,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 25
+            },
+            "HMT": {
+              "theory": 65,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S005",
+          "name": "Rafi Rahman",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 100,
+            "ENG": 100,
+            "MAT": 86,
+            "PHY": {
+              "theory": 57,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 24,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 60,
+              "practical": 24
+            },
+            "HMT": {
+              "theory": 69,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S006",
+          "name": "Lamia Akter",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 57,
+            "ENG": 71,
+            "MAT": 60,
+            "PHY": {
+              "theory": 50,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 53,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 51,
+              "practical": 17
+            },
+            "AGR": {
+              "theory": 41,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S007",
+          "name": "Lamia Begum",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 56,
+            "ENG": 31,
+            "MAT": 45,
+            "PHY": {
+              "theory": 41,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 33,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 30,
+              "practical": 14
+            },
+            "REL": 42
+          }
+        },
+        {
+          "id": "S008",
+          "name": "Kamal Karim",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 73,
+            "ENG": 69,
+            "MAT": 89,
+            "PHY": {
+              "theory": 50,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 58,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 16
+            },
+            "REL": 87
+          }
+        },
+        {
+          "id": "S009",
+          "name": "Chandan Islam",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 91,
+            "ENG": 97,
+            "MAT": 86,
+            "PHY": {
+              "theory": 67,
+              "practical": 21
+            },
+            "CHE": {
+              "theory": 64,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 71,
+              "practical": 25
+            },
+            "HMT": {
+              "theory": 67,
+              "practical": 20
+            }
+          }
+        },
+        {
+          "id": "S010",
+          "name": "Hasib Das",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 37,
+            "ENG": 43,
+            "MAT": 50,
+            "PHY": {
+              "theory": 23,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 27,
+              "practical": 7
+            },
+            "BIO": {
+              "theory": 30,
+              "practical": 8
+            },
+            "HMT": {
+              "theory": 28,
+              "practical": 5
+            }
+          }
+        },
+        {
+          "id": "S011",
+          "name": "Chandan Rahman",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 57,
+            "ENG": 82,
+            "MAT": 75,
+            "PHY": {
+              "theory": 60,
+              "practical": 5
+            },
+            "CHE": {
+              "theory": 58,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 69,
+              "practical": 21
+            },
+            "AGR": {
+              "theory": 55,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S012",
+          "name": "Tanvir Begum",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 49,
+            "ENG": 48,
+            "MAT": 30,
+            "PHY": {
+              "theory": 26,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 39,
+              "practical": 5
+            },
+            "BIO": {
+              "theory": 32,
+              "practical": 13
+            },
+            "REL": 39
+          }
+        },
+        {
+          "id": "S013",
+          "name": "Dipa Das",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 24,
+            "ENG": 37,
+            "MAT": 41,
+            "PHY": {
+              "theory": 22,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 27,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 28,
+              "practical": 7
+            },
+            "REL": 44
+          }
+        },
+        {
+          "id": "S014",
+          "name": "Sadia Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 45,
+            "ENG": 53,
+            "MAT": 39,
+            "PHY": {
+              "theory": 43,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 8
+            },
+            "HMT": {
+              "theory": 32,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S015",
+          "name": "Jui Akter",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 69,
+            "ENG": 61,
+            "MAT": 61,
+            "PHY": {
+              "theory": 47,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 39,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 33,
+              "practical": 16
+            },
+            "REL": 43
+          }
+        },
+        {
+          "id": "S016",
+          "name": "Sadia Akter",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 30,
+            "ENG": 30,
+            "MAT": 38,
+            "PHY": {
+              "theory": 15,
+              "practical": 6
+            },
+            "CHE": {
+              "theory": 29,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 14,
+              "practical": 4
+            },
+            "HMT": {
+              "theory": 33,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S017",
+          "name": "Hasib Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 51,
+            "ENG": 61,
+            "MAT": 51,
+            "PHY": {
+              "theory": 49,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 31,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 44,
+              "practical": 13
+            },
+            "HMT": {
+              "theory": 45,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S018",
+          "name": "Sadia Begum",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 77,
+            "ENG": 67,
+            "MAT": 69,
+            "PHY": {
+              "theory": 53,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 56,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 39,
+              "practical": 19
+            },
+            "REL": 49
+          }
+        },
+        {
+          "id": "S019",
+          "name": "Sadia Akter",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 45,
+            "ENG": 23,
+            "MAT": 46,
+            "PHY": {
+              "theory": 32,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 27,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 33,
+              "practical": 11
+            },
+            "REL": 26
+          }
+        },
+        {
+          "id": "S020",
+          "name": "Tanvir Khatun",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 75,
+            "ENG": 74,
+            "MAT": 68,
+            "PHY": {
+              "theory": 44,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 49,
+              "practical": 18
+            },
+            "REL": 62
+          }
+        },
+        {
+          "id": "S021",
+          "name": "Rafi Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 72,
+            "ENG": 76,
+            "MAT": 74,
+            "PHY": {
+              "theory": 62,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 62,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 53,
+              "practical": 21
+            },
+            "HMT": {
+              "theory": 71,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S022",
+          "name": "Rafi Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 58,
+            "ENG": 57,
+            "MAT": 65,
+            "PHY": {
+              "theory": 51,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 43,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 50,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 42,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S023",
+          "name": "Rafi Das",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 64,
+            "ENG": 81,
+            "MAT": 68,
+            "PHY": {
+              "theory": 50,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 45,
+              "practical": 17
+            },
+            "AGR": {
+              "theory": 50,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S024",
+          "name": "Sadia Ahmed",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 65,
+            "ENG": 62,
+            "MAT": 81,
+            "PHY": {
+              "theory": 55,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 63,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 54,
+              "practical": 12
+            },
+            "HMT": {
+              "theory": 43,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S025",
+          "name": "Nusrat Sultana",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 70,
+            "ENG": 76,
+            "MAT": 75,
+            "PHY": {
+              "theory": 49,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 56,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 49,
+              "practical": 17
+            },
+            "HMT": {
+              "theory": 50,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S026",
+          "name": "Omar Ahmed",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 85,
+            "ENG": 79,
+            "MAT": 87,
+            "PHY": {
+              "theory": 63,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 59,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 58,
+              "practical": 20
+            },
+            "REL": 74
+          }
+        },
+        {
+          "id": "S027",
+          "name": "Tanvir Islam",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 72,
+            "ENG": 64,
+            "MAT": 76,
+            "PHY": {
+              "theory": 52,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 55,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 28,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S028",
+          "name": "Chandan Das",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 84,
+            "ENG": 76,
+            "MAT": 95,
+            "PHY": {
+              "theory": 66,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 63,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 65,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 61,
+              "practical": 23
+            }
+          }
+        },
+        {
+          "id": "S029",
+          "name": "Imran Karim",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 60,
+            "ENG": 57,
+            "MAT": 55,
+            "PHY": {
+              "theory": 37,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 40,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 36,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 45,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S030",
+          "name": "Chandan Das",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 30,
+            "ENG": 50,
+            "MAT": 41,
+            "PHY": {
+              "theory": 28,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 36,
+              "practical": 12
+            },
+            "BIO": {
+              "theory": 32,
+              "practical": 9
+            },
+            "AGR": {
+              "theory": 31,
+              "practical": 6
+            }
+          }
+        },
+        {
+          "id": "S031",
+          "name": "Nusrat Karim",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 88,
+            "ENG": 87,
+            "MAT": 77,
+            "PHY": {
+              "theory": 65,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 66,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 62,
+              "practical": 24
+            },
+            "REL": 90
+          }
+        },
+        {
+          "id": "S032",
+          "name": "Hasib Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 76,
+            "ENG": 58,
+            "MAT": 49,
+            "PHY": {
+              "theory": 40,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 45,
+              "practical": 19
+            },
+            "BIO": "AB",
+            "HMT": {
+              "theory": 46,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S033",
+          "name": "Sadia Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 85,
+            "ENG": 81,
+            "MAT": 84,
+            "PHY": {
+              "theory": 59,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 23
+            },
+            "HMT": {
+              "theory": 60,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S034",
+          "name": "Urmi Akter",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 42,
+            "ENG": 25,
+            "MAT": 54,
+            "PHY": {
+              "theory": 28,
+              "practical": 7
+            },
+            "CHE": {
+              "theory": 29,
+              "practical": 9
+            },
+            "BIO": {
+              "theory": 22,
+              "practical": 8
+            },
+            "REL": 37
+          }
+        },
+        {
+          "id": "S035",
+          "name": "Urmi Begum",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 69,
+            "ENG": 58,
+            "MAT": 57,
+            "PHY": {
+              "theory": 47,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 47,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 18
+            },
+            "REL": 67
+          }
+        },
+        {
+          "id": "S036",
+          "name": "Tanvir Hossain",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 82,
+            "ENG": 86,
+            "MAT": 85,
+            "PHY": {
+              "theory": 52,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 71,
+              "practical": 20
+            },
+            "REL": 81
+          }
+        },
+        {
+          "id": "S037",
+          "name": "Emon Ahmed",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 58,
+            "ENG": 47,
+            "MAT": 42,
+            "PHY": {
+              "theory": 46,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 39,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 44,
+              "practical": 10
+            },
+            "HMT": {
+              "theory": 40,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S038",
+          "name": "Chandan Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 86,
+            "ENG": 55,
+            "MAT": 64,
+            "PHY": {
+              "theory": 50,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 63,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 57,
+              "practical": 10
+            },
+            "HMT": {
+              "theory": 56,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S039",
+          "name": "Urmi Das",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 61,
+            "ENG": 54,
+            "MAT": 69,
+            "PHY": {
+              "theory": 51,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 48,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 10
+            },
+            "REL": 54
+          }
+        },
+        {
+          "id": "S040",
+          "name": "Rafi Islam",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 73,
+            "ENG": 55,
+            "MAT": 70,
+            "PHY": {
+              "theory": 69,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 56,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 59,
+              "practical": 17
+            },
+            "AGR": {
+              "theory": 59,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S041",
+          "name": "Hasib Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 70,
+            "ENG": 83,
+            "MAT": 51,
+            "PHY": {
+              "theory": 62,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 53,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 21
+            },
+            "REL": 86
+          }
+        },
+        {
+          "id": "S042",
+          "name": "Jui Hossain",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 37,
+            "ENG": 37,
+            "MAT": 35,
+            "PHY": {
+              "theory": 24,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 29,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 27,
+              "practical": 8
+            },
+            "HMT": {
+              "theory": 16,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S043",
+          "name": "Emon Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 78,
+            "ENG": 85,
+            "MAT": 87,
+            "PHY": {
+              "theory": 65,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 63,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 56,
+              "practical": 20
+            },
+            "REL": 69
+          }
+        },
+        {
+          "id": "S044",
+          "name": "Arif Karim",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 92,
+            "ENG": 66,
+            "MAT": 88,
+            "PHY": {
+              "theory": 60,
+              "practical": 21
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 56,
+              "practical": 20
+            },
+            "HMT": {
+              "theory": 66,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S045",
+          "name": "Jui Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 84,
+            "ENG": 84,
+            "MAT": 87,
+            "PHY": {
+              "theory": 55,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 62,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 20
+            },
+            "REL": "AB"
+          }
+        },
+        {
+          "id": "S046",
+          "name": "Arif Hossain",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 72,
+            "ENG": 68,
+            "MAT": 56,
+            "PHY": {
+              "theory": 53,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 54,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 48,
+              "practical": 16
+            },
+            "HMT": {
+              "theory": 48,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S047",
+          "name": "Hasib Ahmed",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 54,
+            "ENG": 52,
+            "MAT": 50,
+            "PHY": {
+              "theory": 45,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 44,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 50,
+              "practical": 16
+            },
+            "REL": 63
+          }
+        },
+        {
+          "id": "S048",
+          "name": "Arif Das",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 61,
+            "ENG": 73,
+            "MAT": 78,
+            "PHY": {
+              "theory": 44,
+              "practical": 21
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 12
+            },
+            "REL": 74
+          }
+        },
+        {
+          "id": "S049",
+          "name": "Lamia Begum",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 77,
+            "ENG": 87,
+            "MAT": 89,
+            "PHY": {
+              "theory": 66,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 60,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 54,
+              "practical": 20
+            },
+            "REL": 94
+          }
+        },
+        {
+          "id": "S050",
+          "name": "Bithi Begum",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 83,
+            "ENG": 76,
+            "MAT": 95,
+            "PHY": {
+              "theory": 59,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 62,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 62,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 57,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S051",
+          "name": "Nusrat Hossain",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 22,
+            "ENG": 26,
+            "MAT": 19,
+            "PHY": {
+              "theory": 9,
+              "practical": 6
+            },
+            "CHE": {
+              "theory": 25,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 23,
+              "practical": 6
+            },
+            "REL": 28
+          }
+        },
+        {
+          "id": "S052",
+          "name": "Urmi Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 43,
+            "ENG": 48,
+            "MAT": 44,
+            "PHY": {
+              "theory": 31,
+              "practical": 11
+            },
+            "CHE": {
+              "theory": 28,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 36,
+              "practical": 9
+            },
+            "REL": 33
+          }
+        },
+        {
+          "id": "S053",
+          "name": "Omar Karim",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 60,
+            "ENG": 38,
+            "MAT": 65,
+            "PHY": {
+              "theory": 42,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 10
+            },
+            "REL": 55
+          }
+        },
+        {
+          "id": "S054",
+          "name": "Lamia Begum",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 65,
+            "ENG": 76,
+            "MAT": 87,
+            "PHY": {
+              "theory": 58,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 60,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 25
+            },
+            "AGR": {
+              "theory": 66,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S055",
+          "name": "Hasib Sultana",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 51,
+            "ENG": 46,
+            "MAT": 48,
+            "PHY": {
+              "theory": 41,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 33,
+              "practical": 11
+            }
+          }
+        },
+        {
+          "id": "S056",
+          "name": "Hasib Hossain",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 99,
+            "ENG": 80,
+            "MAT": 68,
+            "PHY": {
+              "theory": 60,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 55,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 65,
+              "practical": 21
+            },
+            "REL": 68
+          }
+        },
+        {
+          "id": "S057",
+          "name": "Bithi Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 60,
+            "ENG": 73,
+            "MAT": 71,
+            "PHY": {
+              "theory": 58,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 54,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 12
+            },
+            "REL": 75
+          }
+        },
+        {
+          "id": "S058",
+          "name": "Farzana Sultana",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 56,
+            "ENG": 67,
+            "MAT": 69,
+            "PHY": {
+              "theory": 50,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 47,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 15
+            },
+            "AGR": {
+              "theory": 43,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S059",
+          "name": "Urmi Rahman",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 100,
+            "ENG": 98,
+            "MAT": 80,
+            "PHY": {
+              "theory": 72,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 73,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 70,
+              "practical": 23
+            },
+            "REL": 81
+          }
+        },
+        {
+          "id": "S060",
+          "name": "Hasib Sultana",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 97,
+            "ENG": 84,
+            "MAT": 78,
+            "PHY": {
+              "theory": 75,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 73,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 70,
+              "practical": 22
+            },
+            "HMT": {
+              "theory": 70,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S061",
+          "name": "Hasib Khatun",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 39,
+            "ENG": 45,
+            "MAT": 29,
+            "PHY": {
+              "theory": 27,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 28,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 31,
+              "practical": 8
+            },
+            "REL": 45
+          }
+        },
+        {
+          "id": "S062",
+          "name": "Sadia Das",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 70,
+            "ENG": 65,
+            "MAT": 62,
+            "PHY": {
+              "theory": 63,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 46,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 51,
+              "practical": 16
+            },
+            "HMT": {
+              "theory": 47,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S063",
+          "name": "Kamal Sultana",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 73,
+            "ENG": 69,
+            "MAT": 82,
+            "PHY": {
+              "theory": 50,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 54,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 45,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S064",
+          "name": "Lamia Khatun",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 58,
+            "ENG": 0,
+            "MAT": 89,
+            "PHY": {
+              "theory": 36,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 50,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 48,
+              "practical": 13
+            },
+            "AGR": {
+              "theory": 42,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S065",
+          "name": "Bithi Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 48,
+            "ENG": 45,
+            "MAT": 34,
+            "PHY": {
+              "theory": 37,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 40,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 30,
+              "practical": 13
+            },
+            "HMT": {
+              "theory": 33,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S066",
+          "name": "Hasib Hossain",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 84,
+            "ENG": 90,
+            "MAT": 93,
+            "PHY": {
+              "theory": 60,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 25
+            },
+            "HMT": {
+              "theory": 57,
+              "practical": 23
+            }
+          }
+        },
+        {
+          "id": "S067",
+          "name": "Lamia Ahmed",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 49,
+            "ENG": 57,
+            "MAT": 32,
+            "PHY": {
+              "theory": 34,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 35,
+              "practical": 13
+            },
+            "HMT": {
+              "theory": 36,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S068",
+          "name": "Chandan Hossain",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 54,
+            "ENG": 67,
+            "MAT": 66,
+            "PHY": {
+              "theory": 45,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 58,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 13
+            },
+            "REL": 84
+          }
+        },
+        {
+          "id": "S069",
+          "name": "Rafi Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 94,
+            "ENG": 71,
+            "MAT": 92,
+            "PHY": {
+              "theory": 68,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 63,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 71,
+              "practical": 22
+            },
+            "AGR": {
+              "theory": 70,
+              "practical": 24
+            }
+          }
+        },
+        {
+          "id": "S070",
+          "name": "Tanvir Begum",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 80,
+            "ENG": 70,
+            "MAT": 60,
+            "PHY": {
+              "theory": 37,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 30,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 24,
+              "practical": 9
+            },
+            "REL": 79
+          }
+        },
+        {
+          "id": "S071",
+          "name": "Emon Begum",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 60,
+            "ENG": 50,
+            "MAT": 58,
+            "PHY": {
+              "theory": 46,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 37,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 35,
+              "practical": 15
+            },
+            "HMT": {
+              "theory": 34,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S072",
+          "name": "Emon Akter",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 43,
+            "ENG": 44,
+            "MAT": 27,
+            "PHY": {
+              "theory": 40,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 31,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 40,
+              "practical": 12
+            },
+            "AGR": {
+              "theory": 22,
+              "practical": 12
+            }
+          }
+        },
+        {
+          "id": "S073",
+          "name": "Gias Khatun",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 79,
+            "ENG": 89,
+            "MAT": 82,
+            "PHY": {
+              "theory": 62,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 62,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 20
+            },
+            "REL": 90
+          }
+        },
+        {
+          "id": "S074",
+          "name": "Omar Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 57,
+            "ENG": 52,
+            "MAT": 51,
+            "PHY": {
+              "theory": 41,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 48,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 48,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S075",
+          "name": "Kamal Ahmed",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 56,
+            "ENG": 44,
+            "MAT": 45,
+            "PHY": {
+              "theory": 46,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 33,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 29,
+              "practical": 11
+            },
+            "HMT": {
+              "theory": 36,
+              "practical": 12
+            }
+          }
+        },
+        {
+          "id": "S076",
+          "name": "Tanvir Das",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 100,
+            "ENG": 91,
+            "MAT": 75,
+            "PHY": {
+              "theory": 68,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 65,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 70,
+              "practical": 22
+            },
+            "AGR": {
+              "theory": 75,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S077",
+          "name": "Bithi Hossain",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 71,
+            "ENG": 62,
+            "MAT": 58,
+            "PHY": {
+              "theory": 44,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 55,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 14
+            },
+            "HMT": {
+              "theory": 60,
+              "practical": 5
+            }
+          }
+        },
+        {
+          "id": "S078",
+          "name": "Omar Ahmed",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 76,
+            "ENG": 93,
+            "MAT": 83,
+            "PHY": {
+              "theory": 68,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 70,
+              "practical": 21
+            },
+            "REL": 95
+          }
+        },
+        {
+          "id": "S079",
+          "name": "Hasib Ahmed",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 31,
+            "ENG": 52,
+            "MAT": 30,
+            "PHY": {
+              "theory": 25,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 43,
+              "practical": 12
+            },
+            "BIO": {
+              "theory": 17,
+              "practical": 15
+            },
+            "REL": 46
+          }
+        },
+        {
+          "id": "S080",
+          "name": "Emon Rahman",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 41,
+            "ENG": 66,
+            "MAT": 38,
+            "PHY": {
+              "theory": 33,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 37,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 29,
+              "practical": 17
+            },
+            "HMT": {
+              "theory": 46,
+              "practical": 11
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "PUB-02",
+      "subjects": [
+        {
+          "code": "BAN",
+          "name": "Bangla",
+          "practical": false
+        },
+        {
+          "code": "ENG",
+          "name": "English",
+          "practical": false
+        },
+        {
+          "code": "MAT",
+          "name": "Mathematics",
+          "practical": false
+        },
+        {
+          "code": "PHY",
+          "name": "Physics",
+          "practical": true
+        },
+        {
+          "code": "CHE",
+          "name": "Chemistry",
+          "practical": true
+        },
+        {
+          "code": "BIO",
+          "name": "Biology",
+          "practical": true
+        },
+        {
+          "code": "HMT",
+          "name": "Higher Mathematics",
+          "practical": true
+        },
+        {
+          "code": "AGR",
+          "name": "Agriculture",
+          "practical": true
+        },
+        {
+          "code": "REL",
+          "name": "Religion",
+          "practical": false
+        }
+      ],
+      "compulsory": [
+        "BAN",
+        "ENG",
+        "MAT",
+        "PHY",
+        "CHE",
+        "BIO"
+      ],
+      "students": [
+        {
+          "id": "S001",
+          "name": "Urmi Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 77,
+            "ENG": 82,
+            "MAT": 32,
+            "PHY": {
+              "theory": 56,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 58,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 64,
+              "practical": 20
+            },
+            "HMT": {
+              "theory": 48,
+              "practical": 25
+            }
+          }
+        },
+        {
+          "id": "S002",
+          "name": "Imran Islam",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 25,
+            "ENG": 32,
+            "MAT": 35,
+            "PHY": {
+              "theory": 31,
+              "practical": 5
+            },
+            "CHE": {
+              "theory": 32,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 25,
+              "practical": 11
+            },
+            "REL": 41
+          }
+        },
+        {
+          "id": "S003",
+          "name": "Omar Sultana",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 79,
+            "ENG": 97,
+            "MAT": 84,
+            "PHY": {
+              "theory": 75,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 75,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 67,
+              "practical": 19
+            },
+            "HMT": {
+              "theory": 64,
+              "practical": 25
+            }
+          }
+        },
+        {
+          "id": "S004",
+          "name": "Imran Islam",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 65,
+            "ENG": 53,
+            "MAT": 62,
+            "PHY": {
+              "theory": 43,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 30,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 14
+            },
+            "REL": 66
+          }
+        },
+        {
+          "id": "S005",
+          "name": "Gias Hossain",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 37,
+            "ENG": 26,
+            "MAT": 32,
+            "PHY": {
+              "theory": 27,
+              "practical": 6
+            },
+            "CHE": {
+              "theory": 28,
+              "practical": 5
+            },
+            "BIO": {
+              "theory": 26,
+              "practical": 7
+            },
+            "REL": 44
+          }
+        },
+        {
+          "id": "S006",
+          "name": "Hasib Sultana",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 60,
+            "ENG": 75,
+            "MAT": 63,
+            "PHY": {
+              "theory": 64,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 59,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 68,
+              "practical": 20
+            },
+            "HMT": {
+              "theory": 49,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S007",
+          "name": "Omar Sultana",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 54,
+            "ENG": 66,
+            "MAT": 48,
+            "PHY": {
+              "theory": 37,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 39,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 36,
+              "practical": 16
+            },
+            "AGR": {
+              "theory": 45,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S008",
+          "name": "Urmi Khatun",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 70,
+            "ENG": 43,
+            "MAT": 67,
+            "PHY": {
+              "theory": 38,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 41,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 49,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 51,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S009",
+          "name": "Nusrat Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 73,
+            "ENG": 92,
+            "MAT": 76,
+            "PHY": {
+              "theory": 58,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 24,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 21
+            },
+            "HMT": {
+              "theory": 75,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S010",
+          "name": "Bithi Das",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 86,
+            "ENG": 99,
+            "MAT": 96,
+            "PHY": {
+              "theory": 69,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 74,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 62,
+              "practical": 25
+            },
+            "REL": 75
+          }
+        },
+        {
+          "id": "S011",
+          "name": "Kamal Karim",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 71,
+            "ENG": 66,
+            "MAT": 74,
+            "PHY": {
+              "theory": 60,
+              "practical": 7
+            },
+            "CHE": {
+              "theory": 59,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 64,
+              "practical": 20
+            },
+            "AGR": {
+              "theory": 64,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S012",
+          "name": "Chandan Khatun",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 70,
+            "ENG": 54,
+            "MAT": 74,
+            "PHY": {
+              "theory": 61,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 43,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 51,
+              "practical": 14
+            },
+            "REL": 49
+          }
+        },
+        {
+          "id": "S013",
+          "name": "Priya Khatun",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 37,
+            "ENG": 34,
+            "MAT": 30,
+            "PHY": {
+              "theory": 27,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 35,
+              "practical": 7
+            },
+            "BIO": {
+              "theory": 35,
+              "practical": 11
+            },
+            "REL": 28
+          }
+        },
+        {
+          "id": "S014",
+          "name": "Rafi Ahmed",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 31,
+            "ENG": 37,
+            "MAT": 29,
+            "PHY": {
+              "theory": 29,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 24,
+              "practical": 7
+            },
+            "BIO": {
+              "theory": 32,
+              "practical": 7
+            },
+            "REL": 40
+          }
+        },
+        {
+          "id": "S015",
+          "name": "Bithi Karim",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 50,
+            "ENG": 36,
+            "MAT": 40,
+            "PHY": {
+              "theory": 34,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 46,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 44,
+              "practical": 13
+            },
+            "HMT": {
+              "theory": 39,
+              "practical": 11
+            }
+          }
+        },
+        {
+          "id": "S016",
+          "name": "Arif Begum",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 44,
+            "ENG": 28,
+            "MAT": 36,
+            "PHY": {
+              "theory": 27,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 21,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 10
+            },
+            "AGR": {
+              "theory": 32,
+              "practical": 11
+            }
+          }
+        },
+        {
+          "id": "S017",
+          "name": "Nusrat Hossain",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 84,
+            "ENG": 81,
+            "MAT": 88,
+            "PHY": {
+              "theory": 62,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 21
+            },
+            "HMT": {
+              "theory": 61,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S018",
+          "name": "Priya Hossain",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 42,
+            "ENG": 55,
+            "MAT": 58,
+            "PHY": {
+              "theory": 42,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 35,
+              "practical": 14
+            },
+            "AGR": {
+              "theory": 45,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S019",
+          "name": "Arif Ahmed",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 55,
+            "ENG": 55,
+            "MAT": 58,
+            "PHY": {
+              "theory": 56,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 52,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 15
+            },
+            "HMT": {
+              "theory": 50,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S020",
+          "name": "Omar Khatun",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 84,
+            "ENG": 74,
+            "MAT": 60,
+            "PHY": {
+              "theory": 47,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 58,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 25,
+              "practical": 9
+            }
+          }
+        },
+        {
+          "id": "S021",
+          "name": "Jui Islam",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 47,
+            "ENG": 50,
+            "MAT": 49,
+            "PHY": {
+              "theory": 35,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 40,
+              "practical": 11
+            },
+            "REL": 59
+          }
+        },
+        {
+          "id": "S022",
+          "name": "Tanvir Sultana",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 81,
+            "ENG": 81,
+            "MAT": 83,
+            "PHY": {
+              "theory": 55,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 53,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 59,
+              "practical": 20
+            },
+            "HMT": {
+              "theory": 57,
+              "practical": 24
+            }
+          }
+        },
+        {
+          "id": "S023",
+          "name": "Sadia Ahmed",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 85,
+            "ENG": 92,
+            "MAT": 82,
+            "PHY": {
+              "theory": 61,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 75,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 64,
+              "practical": 21
+            },
+            "HMT": {
+              "theory": 52,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S024",
+          "name": "Bithi Rahman",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 56,
+            "ENG": 62,
+            "MAT": 63,
+            "PHY": {
+              "theory": 51,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 45,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 48,
+              "practical": 20
+            },
+            "AGR": {
+              "theory": 52,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S025",
+          "name": "Imran Hossain",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 58,
+            "ENG": 56,
+            "MAT": 49,
+            "PHY": {
+              "theory": 47,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 38,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 16
+            },
+            "REL": 58
+          }
+        },
+        {
+          "id": "S026",
+          "name": "Arif Akter",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 75,
+            "ENG": 100,
+            "MAT": 91,
+            "PHY": {
+              "theory": 67,
+              "practical": 21
+            },
+            "CHE": {
+              "theory": 74,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 57,
+              "practical": 25
+            },
+            "REL": 81
+          }
+        },
+        {
+          "id": "S027",
+          "name": "Emon Ahmed",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 96,
+            "ENG": 93,
+            "MAT": 92,
+            "PHY": {
+              "theory": 74,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 25
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 23
+            },
+            "REL": 90
+          }
+        },
+        {
+          "id": "S028",
+          "name": "Lamia Rahman",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 73,
+            "ENG": 66,
+            "MAT": 59,
+            "PHY": {
+              "theory": 58,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 68,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 54,
+              "practical": 16
+            },
+            "AGR": {
+              "theory": 51,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S029",
+          "name": "Omar Das",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 78,
+            "ENG": 96,
+            "MAT": 91,
+            "PHY": {
+              "theory": 68,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 72,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 62,
+              "practical": 24
+            },
+            "REL": 97
+          }
+        },
+        {
+          "id": "S030",
+          "name": "Urmi Karim",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 72,
+            "ENG": 76,
+            "MAT": 79,
+            "PHY": {
+              "theory": 56,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 67,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 59,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 56,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S031",
+          "name": "Urmi Hossain",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 62,
+            "ENG": 74,
+            "MAT": 61,
+            "PHY": {
+              "theory": 54,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 43,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 19
+            },
+            "HMT": {
+              "theory": 54,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S032",
+          "name": "Dipa Das",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 62,
+            "ENG": 67,
+            "MAT": 69,
+            "PHY": {
+              "theory": 50,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 43,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 15
+            },
+            "REL": 54
+          }
+        },
+        {
+          "id": "S033",
+          "name": "Rafi Rahman",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 53,
+            "ENG": 63,
+            "MAT": 74,
+            "PHY": {
+              "theory": 49,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 51,
+              "practical": 18
+            },
+            "BIO": "AB",
+            "HMT": {
+              "theory": 51,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S034",
+          "name": "Priya Sultana",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 74,
+            "ENG": 100,
+            "MAT": 92,
+            "PHY": {
+              "theory": 61,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 60,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 69,
+              "practical": 23
+            },
+            "AGR": {
+              "theory": 61,
+              "practical": 21
+            }
+          }
+        },
+        {
+          "id": "S035",
+          "name": "Lamia Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 48,
+            "ENG": 50,
+            "MAT": 52,
+            "PHY": {
+              "theory": 38,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 35,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 36,
+              "practical": 11
+            },
+            "HMT": {
+              "theory": 32,
+              "practical": 11
+            }
+          }
+        },
+        {
+          "id": "S036",
+          "name": "Gias Ahmed",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 68,
+            "ENG": 71,
+            "MAT": 74,
+            "PHY": {
+              "theory": 49,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 53,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 65,
+              "practical": 22
+            },
+            "REL": "AB"
+          }
+        },
+        {
+          "id": "S037",
+          "name": "Urmi Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 94,
+            "ENG": 89,
+            "MAT": 88,
+            "PHY": {
+              "theory": 70,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 69,
+              "practical": 25
+            },
+            "BIO": {
+              "theory": 64,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 64,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S038",
+          "name": "Rafi Khatun",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 94,
+            "ENG": 94,
+            "MAT": 83,
+            "PHY": {
+              "theory": 66,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 67,
+              "practical": 22
+            },
+            "HMT": {
+              "theory": 70,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S039",
+          "name": "Jui Khatun",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 65,
+            "ENG": 66,
+            "MAT": 63,
+            "PHY": {
+              "theory": 36,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 45,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 40,
+              "practical": 16
+            },
+            "HMT": {
+              "theory": 40,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S040",
+          "name": "Arif Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 54,
+            "ENG": 0,
+            "MAT": 66,
+            "PHY": {
+              "theory": 49,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 52,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 16
+            },
+            "AGR": {
+              "theory": 47,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S041",
+          "name": "Imran Karim",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 45,
+            "ENG": 40,
+            "MAT": 52,
+            "PHY": {
+              "theory": 34,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 41,
+              "practical": 12
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 13
+            },
+            "REL": 50
+          }
+        },
+        {
+          "id": "S042",
+          "name": "Urmi Sultana",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 59,
+            "ENG": 62,
+            "MAT": 64,
+            "PHY": {
+              "theory": 37,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 47,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 51,
+              "practical": 12
+            },
+            "HMT": {
+              "theory": 41,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S043",
+          "name": "Bithi Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 80,
+            "ENG": 70,
+            "MAT": 60,
+            "PHY": {
+              "theory": 37,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 30,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 24,
+              "practical": 9
+            },
+            "REL": 79
+          }
+        },
+        {
+          "id": "S044",
+          "name": "Mahin Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 36,
+            "ENG": 48,
+            "MAT": 47,
+            "PHY": {
+              "theory": 31,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 37,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 33,
+              "practical": 4
+            },
+            "AGR": {
+              "theory": 39,
+              "practical": 7
+            }
+          }
+        },
+        {
+          "id": "S045",
+          "name": "Gias Karim",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 66,
+            "ENG": 77,
+            "MAT": 66,
+            "PHY": {
+              "theory": 47,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 46,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 44,
+              "practical": 21
+            },
+            "REL": 57
+          }
+        },
+        {
+          "id": "S046",
+          "name": "Mahin Karim",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 87,
+            "ENG": 70,
+            "MAT": 78,
+            "PHY": {
+              "theory": 56,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 25
+            },
+            "BIO": {
+              "theory": 72,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 61,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S047",
+          "name": "Bithi Hossain",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 46,
+            "ENG": 54,
+            "MAT": 55,
+            "PHY": {
+              "theory": 39,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 33,
+              "practical": 12
+            },
+            "BIO": {
+              "theory": 38,
+              "practical": 10
+            },
+            "HMT": {
+              "theory": 36,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S048",
+          "name": "Nusrat Islam",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 73,
+            "ENG": 66,
+            "MAT": 70,
+            "PHY": {
+              "theory": 47,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 39,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 56,
+              "practical": 20
+            },
+            "REL": 66
+          }
+        },
+        {
+          "id": "S049",
+          "name": "Rafi Akter",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 77,
+            "ENG": 79,
+            "MAT": 89,
+            "PHY": {
+              "theory": 57,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 63,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 22
+            },
+            "REL": 80
+          }
+        },
+        {
+          "id": "S050",
+          "name": "Bithi Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 84,
+            "ENG": 86,
+            "MAT": 88,
+            "PHY": {
+              "theory": 75,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 60,
+              "practical": 24
+            },
+            "BIO": {
+              "theory": 69,
+              "practical": 22
+            },
+            "AGR": {
+              "theory": 75,
+              "practical": 23
+            }
+          }
+        },
+        {
+          "id": "S051",
+          "name": "Farzana Karim",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 50,
+            "ENG": 72,
+            "MAT": 62,
+            "PHY": {
+              "theory": 40,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 50,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 15
+            },
+            "HMT": {
+              "theory": 60,
+              "practical": 5
+            }
+          }
+        },
+        {
+          "id": "S052",
+          "name": "Urmi Rahman",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 76,
+            "ENG": 76,
+            "MAT": 72,
+            "PHY": {
+              "theory": 48,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 65,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 60,
+              "practical": 22
+            },
+            "REL": 63
+          }
+        },
+        {
+          "id": "S053",
+          "name": "Kamal Khatun",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 57,
+            "ENG": 73,
+            "MAT": 70,
+            "PHY": {
+              "theory": 49,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 38,
+              "practical": 21
+            },
+            "HMT": {
+              "theory": 42,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S054",
+          "name": "Nusrat Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 82,
+            "ENG": 59,
+            "MAT": 72,
+            "PHY": {
+              "theory": 54,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 56,
+              "practical": 17
+            },
+            "HMT": {
+              "theory": 50,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S055",
+          "name": "Tanvir Begum",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 47,
+            "ENG": 50,
+            "MAT": 40,
+            "PHY": {
+              "theory": 25,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 31,
+              "practical": 7
+            },
+            "BIO": {
+              "theory": 34,
+              "practical": 11
+            },
+            "REL": 41
+          }
+        },
+        {
+          "id": "S056",
+          "name": "Nusrat Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 61,
+            "ENG": 74,
+            "MAT": 76,
+            "PHY": {
+              "theory": 57,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 62,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 52,
+              "practical": 16
+            },
+            "HMT": {
+              "theory": 60,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S057",
+          "name": "Sadia Begum",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 72,
+            "ENG": 70,
+            "MAT": 72,
+            "PHY": {
+              "theory": 49,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 47,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 57,
+              "practical": 15
+            },
+            "REL": 72
+          }
+        },
+        {
+          "id": "S058",
+          "name": "Chandan Das",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 62,
+            "ENG": 59,
+            "MAT": 56,
+            "PHY": {
+              "theory": 45,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 53,
+              "practical": 16
+            },
+            "REL": 71
+          }
+        },
+        {
+          "id": "S059",
+          "name": "Emon Sultana",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 41,
+            "ENG": 48,
+            "MAT": 30,
+            "PHY": {
+              "theory": 30,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 25,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 24,
+              "practical": 7
+            },
+            "AGR": {
+              "theory": 17,
+              "practical": 8
+            }
+          }
+        },
+        {
+          "id": "S060",
+          "name": "Mahin Rahman",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 94,
+            "ENG": 100,
+            "MAT": 97,
+            "PHY": {
+              "theory": 63,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 46,
+              "practical": 19
+            },
+            "BIO": {
+              "theory": 62,
+              "practical": 21
+            },
+            "REL": 70
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "PUB-03",
+      "subjects": [
+        {
+          "code": "BAN",
+          "name": "Bangla",
+          "practical": false
+        },
+        {
+          "code": "ENG",
+          "name": "English",
+          "practical": false
+        },
+        {
+          "code": "MAT",
+          "name": "Mathematics",
+          "practical": false
+        },
+        {
+          "code": "PHY",
+          "name": "Physics",
+          "practical": true
+        },
+        {
+          "code": "CHE",
+          "name": "Chemistry",
+          "practical": true
+        },
+        {
+          "code": "BIO",
+          "name": "Biology",
+          "practical": true
+        },
+        {
+          "code": "HMT",
+          "name": "Higher Mathematics",
+          "practical": true
+        },
+        {
+          "code": "AGR",
+          "name": "Agriculture",
+          "practical": true
+        },
+        {
+          "code": "REL",
+          "name": "Religion",
+          "practical": false
+        }
+      ],
+      "compulsory": [
+        "BAN",
+        "ENG",
+        "MAT",
+        "PHY",
+        "CHE",
+        "BIO"
+      ],
+      "students": [
+        {
+          "id": "S001",
+          "name": "Urmi Khatun",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 88,
+            "ENG": 89,
+            "MAT": 91,
+            "PHY": {
+              "theory": 56,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 68,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 70,
+              "practical": 23
+            },
+            "AGR": {
+              "theory": 73,
+              "practical": 20
+            }
+          }
+        },
+        {
+          "id": "S002",
+          "name": "Rafi Ahmed",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 44,
+            "ENG": 43,
+            "MAT": 41,
+            "PHY": {
+              "theory": 27,
+              "practical": 7
+            },
+            "CHE": {
+              "theory": 26,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 10
+            },
+            "REL": 40
+          }
+        },
+        {
+          "id": "S003",
+          "name": "Jui Rahman",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 83,
+            "ENG": 65,
+            "MAT": 94,
+            "PHY": {
+              "theory": 55,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 50,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 52,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 59,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S004",
+          "name": "Imran Das",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 45,
+            "ENG": 36,
+            "MAT": 33,
+            "PHY": {
+              "theory": 23,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 26,
+              "practical": 6
+            },
+            "BIO": {
+              "theory": 27,
+              "practical": 5
+            },
+            "HMT": {
+              "theory": 34,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S005",
+          "name": "Jui Karim",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 70,
+            "ENG": 65,
+            "MAT": 68,
+            "PHY": {
+              "theory": 57,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 16
+            },
+            "REL": 75
+          }
+        },
+        {
+          "id": "S006",
+          "name": "Sadia Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 39,
+            "ENG": 28,
+            "MAT": 42,
+            "PHY": {
+              "theory": 29,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 25,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 26,
+              "practical": 6
+            },
+            "HMT": {
+              "theory": 18,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S007",
+          "name": "Sadia Sultana",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 85,
+            "ENG": 75,
+            "MAT": 30,
+            "PHY": {
+              "theory": 56,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 66,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 72,
+              "practical": 23
+            },
+            "HMT": {
+              "theory": 73,
+              "practical": 25
+            }
+          }
+        },
+        {
+          "id": "S008",
+          "name": "Hasib Das",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 87,
+            "ENG": 77,
+            "MAT": 94,
+            "PHY": {
+              "theory": 64,
+              "practical": 25
+            },
+            "CHE": {
+              "theory": 24,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 74,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 51,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S009",
+          "name": "Chandan Akter",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 32,
+            "ENG": 23,
+            "MAT": 26,
+            "PHY": {
+              "theory": 16,
+              "practical": 4
+            },
+            "CHE": {
+              "theory": 18,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 31,
+              "practical": 8
+            },
+            "HMT": {
+              "theory": 33,
+              "practical": 8
+            }
+          }
+        },
+        {
+          "id": "S010",
+          "name": "Sadia Hossain",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 95,
+            "ENG": 73,
+            "MAT": 96,
+            "PHY": {
+              "theory": 68,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 67,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 75,
+              "practical": 23
+            },
+            "REL": 87
+          }
+        },
+        {
+          "id": "S011",
+          "name": "Rafi Akter",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 59,
+            "ENG": 71,
+            "MAT": 61,
+            "PHY": {
+              "theory": 51,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 50,
+              "practical": 16
+            },
+            "REL": 62
+          }
+        },
+        {
+          "id": "S012",
+          "name": "Urmi Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 76,
+            "ENG": 74,
+            "MAT": 49,
+            "PHY": {
+              "theory": 61,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 15
+            },
+            "BIO": {
+              "theory": 61,
+              "practical": 16
+            },
+            "HMT": {
+              "theory": 48,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S013",
+          "name": "Jui Hossain",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 48,
+            "ENG": 58,
+            "MAT": 62,
+            "PHY": {
+              "theory": 38,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 41,
+              "practical": 13
+            },
+            "REL": 59
+          }
+        },
+        {
+          "id": "S014",
+          "name": "Urmi Rahman",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 40,
+            "ENG": 41,
+            "MAT": 43,
+            "PHY": {
+              "theory": 34,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 20,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 23,
+              "practical": 10
+            },
+            "REL": 29
+          }
+        },
+        {
+          "id": "S015",
+          "name": "Kamal Das",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 80,
+            "ENG": 64,
+            "MAT": 57,
+            "PHY": {
+              "theory": 60,
+              "practical": 5
+            },
+            "CHE": {
+              "theory": 60,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 49,
+              "practical": 14
+            },
+            "AGR": {
+              "theory": 61,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S016",
+          "name": "Farzana Khatun",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 44,
+            "ENG": 38,
+            "MAT": 48,
+            "PHY": {
+              "theory": 33,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 20,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 32,
+              "practical": 7
+            },
+            "AGR": {
+              "theory": 30,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S017",
+          "name": "Tanvir Islam",
+          "class": "Class 9",
+          "optional": "REL",
+          "marks": {
+            "BAN": 74,
+            "ENG": 72,
+            "MAT": 67,
+            "PHY": {
+              "theory": 56,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 53,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 69,
+              "practical": 15
+            },
+            "REL": 40
+          }
+        },
+        {
+          "id": "S018",
+          "name": "Rafi Karim",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 46,
+            "ENG": 49,
+            "MAT": 54,
+            "PHY": {
+              "theory": 28,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 33,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 33,
+              "practical": 11
+            },
+            "HMT": {
+              "theory": 27,
+              "practical": 9
+            }
+          }
+        },
+        {
+          "id": "S019",
+          "name": "Farzana Rahman",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 71,
+            "ENG": 69,
+            "MAT": 72,
+            "PHY": {
+              "theory": 60,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 42,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 56,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 25,
+              "practical": 9
+            }
+          }
+        },
+        {
+          "id": "S020",
+          "name": "Bithi Karim",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 24,
+            "ENG": 42,
+            "MAT": 44,
+            "PHY": {
+              "theory": 31,
+              "practical": 11
+            },
+            "CHE": {
+              "theory": 24,
+              "practical": 9
+            },
+            "BIO": {
+              "theory": 29,
+              "practical": 11
+            },
+            "AGR": {
+              "theory": 23,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S021",
+          "name": "Omar Das",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 86,
+            "ENG": 80,
+            "MAT": 73,
+            "PHY": {
+              "theory": 60,
+              "practical": 21
+            },
+            "CHE": {
+              "theory": 65,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 66,
+              "practical": 22
+            },
+            "AGR": {
+              "theory": 48,
+              "practical": 20
+            }
+          }
+        },
+        {
+          "id": "S022",
+          "name": "Emon Islam",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 21,
+            "ENG": 37,
+            "MAT": 23,
+            "PHY": {
+              "theory": 26,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 23,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 25,
+              "practical": 9
+            },
+            "AGR": {
+              "theory": 28,
+              "practical": 12
+            }
+          }
+        },
+        {
+          "id": "S023",
+          "name": "Lamia Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 95,
+            "ENG": 100,
+            "MAT": 90,
+            "PHY": {
+              "theory": 64,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 71,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 73,
+              "practical": 25
+            },
+            "HMT": {
+              "theory": 69,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S024",
+          "name": "Jui Khatun",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 62,
+            "ENG": 57,
+            "MAT": 52,
+            "PHY": {
+              "theory": 37,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 38,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 43,
+              "practical": 19
+            },
+            "AGR": {
+              "theory": 40,
+              "practical": 12
+            }
+          }
+        },
+        {
+          "id": "S025",
+          "name": "Urmi Begum",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 71,
+            "ENG": 58,
+            "MAT": 54,
+            "PHY": {
+              "theory": 52,
+              "practical": 20
+            },
+            "CHE": {
+              "theory": 40,
+              "practical": 19
+            },
+            "BIO": "AB",
+            "HMT": {
+              "theory": 49,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S026",
+          "name": "Gias Das",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 92,
+            "ENG": 81,
+            "MAT": 76,
+            "PHY": {
+              "theory": 64,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 60,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 72,
+              "practical": 20
+            },
+            "AGR": {
+              "theory": 71,
+              "practical": 20
+            }
+          }
+        },
+        {
+          "id": "S027",
+          "name": "Jui Begum",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 61,
+            "ENG": 53,
+            "MAT": 60,
+            "PHY": {
+              "theory": 48,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 45,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 21
+            },
+            "AGR": {
+              "theory": 40,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S028",
+          "name": "Jui Khatun",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 48,
+            "ENG": 49,
+            "MAT": 51,
+            "PHY": {
+              "theory": 30,
+              "practical": 11
+            },
+            "CHE": {
+              "theory": 27,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 26,
+              "practical": 12
+            },
+            "AGR": {
+              "theory": 37,
+              "practical": 9
+            }
+          }
+        },
+        {
+          "id": "S029",
+          "name": "Arif Akter",
+          "class": "Class 9",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 82,
+            "ENG": 77,
+            "MAT": 80,
+            "PHY": {
+              "theory": 49,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 20
+            },
+            "BIO": {
+              "theory": 64,
+              "practical": 20
+            },
+            "AGR": {
+              "theory": 42,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S030",
+          "name": "Emon Khatun",
+          "class": "Class 9",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 32,
+            "ENG": 40,
+            "MAT": 26,
+            "PHY": {
+              "theory": 27,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 20,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 22,
+              "practical": 1
+            },
+            "HMT": {
+              "theory": 27,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S031",
+          "name": "Imran Ahmed",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 70,
+            "ENG": 71,
+            "MAT": 73,
+            "PHY": {
+              "theory": 53,
+              "practical": 16
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 47,
+              "practical": 16
+            },
+            "REL": 72
+          }
+        },
+        {
+          "id": "S032",
+          "name": "Dipa Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 95,
+            "ENG": 76,
+            "MAT": 73,
+            "PHY": {
+              "theory": 61,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 52,
+              "practical": 17
+            },
+            "HMT": {
+              "theory": 52,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S033",
+          "name": "Mahin Islam",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 67,
+            "ENG": 81,
+            "MAT": 70,
+            "PHY": {
+              "theory": 55,
+              "practical": 24
+            },
+            "CHE": {
+              "theory": 62,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 65,
+              "practical": 23
+            },
+            "REL": "AB"
+          }
+        },
+        {
+          "id": "S034",
+          "name": "Bithi Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 81,
+            "ENG": 100,
+            "MAT": 87,
+            "PHY": {
+              "theory": 75,
+              "practical": 22
+            },
+            "CHE": {
+              "theory": 64,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 73,
+              "practical": 25
+            },
+            "HMT": {
+              "theory": 70,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S035",
+          "name": "Hasib Akter",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 72,
+            "ENG": 88,
+            "MAT": 84,
+            "PHY": {
+              "theory": 61,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 59,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 50,
+              "practical": 17
+            },
+            "AGR": {
+              "theory": 58,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S036",
+          "name": "Arif Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 65,
+            "ENG": 0,
+            "MAT": 55,
+            "PHY": {
+              "theory": 59,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 48,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 46,
+              "practical": 16
+            },
+            "AGR": {
+              "theory": 37,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S037",
+          "name": "Dipa Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 78,
+            "ENG": 72,
+            "MAT": 77,
+            "PHY": {
+              "theory": 62,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 55,
+              "practical": 21
+            },
+            "BIO": {
+              "theory": 63,
+              "practical": 20
+            },
+            "AGR": {
+              "theory": 62,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S038",
+          "name": "Imran Begum",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 44,
+            "ENG": 27,
+            "MAT": 41,
+            "PHY": {
+              "theory": 40,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 41,
+              "practical": 11
+            },
+            "BIO": {
+              "theory": 27,
+              "practical": 9
+            },
+            "HMT": {
+              "theory": 27,
+              "practical": 13
+            }
+          }
+        },
+        {
+          "id": "S039",
+          "name": "Tanvir Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 62,
+            "ENG": 66,
+            "MAT": 56,
+            "PHY": {
+              "theory": 45,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 46,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 34,
+              "practical": 10
+            },
+            "HMT": {
+              "theory": 29,
+              "practical": 19
+            }
+          }
+        },
+        {
+          "id": "S040",
+          "name": "Bithi Islam",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 55,
+            "ENG": 63,
+            "MAT": 55,
+            "PHY": {
+              "theory": 49,
+              "practical": 14
+            },
+            "CHE": {
+              "theory": 44,
+              "practical": 14
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 16
+            },
+            "AGR": {
+              "theory": 30,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S041",
+          "name": "Omar Begum",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 32,
+            "ENG": 26,
+            "MAT": 34,
+            "PHY": {
+              "theory": 26,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 15,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 25,
+              "practical": 5
+            },
+            "AGR": {
+              "theory": 26,
+              "practical": 7
+            }
+          }
+        },
+        {
+          "id": "S042",
+          "name": "Priya Ahmed",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 46,
+            "ENG": 54,
+            "MAT": 36,
+            "PHY": {
+              "theory": 38,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 38,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 42,
+              "practical": 15
+            },
+            "AGR": {
+              "theory": 33,
+              "practical": 5
+            }
+          }
+        },
+        {
+          "id": "S043",
+          "name": "Omar Khatun",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 56,
+            "ENG": 58,
+            "MAT": 64,
+            "PHY": {
+              "theory": 52,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 56,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 50,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 53,
+              "practical": 16
+            }
+          }
+        },
+        {
+          "id": "S044",
+          "name": "Mahin Begum",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 94,
+            "ENG": 94,
+            "MAT": 91,
+            "PHY": {
+              "theory": 62,
+              "practical": 23
+            },
+            "CHE": {
+              "theory": 65,
+              "practical": 23
+            },
+            "BIO": {
+              "theory": 61,
+              "practical": 19
+            },
+            "HMT": {
+              "theory": 58,
+              "practical": 22
+            }
+          }
+        },
+        {
+          "id": "S045",
+          "name": "Lamia Rahman",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 80,
+            "ENG": 70,
+            "MAT": 60,
+            "PHY": {
+              "theory": 37,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 30,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 24,
+              "practical": 9
+            },
+            "REL": 79
+          }
+        },
+        {
+          "id": "S046",
+          "name": "Omar Das",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 44,
+            "ENG": 30,
+            "MAT": 35,
+            "PHY": {
+              "theory": 21,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 18,
+              "practical": 6
+            },
+            "BIO": {
+              "theory": 28,
+              "practical": 4
+            },
+            "AGR": {
+              "theory": 20,
+              "practical": 7
+            }
+          }
+        },
+        {
+          "id": "S047",
+          "name": "Gias Hossain",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 72,
+            "ENG": 76,
+            "MAT": 67,
+            "PHY": {
+              "theory": 52,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 61,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 49,
+              "practical": 19
+            },
+            "REL": 74
+          }
+        },
+        {
+          "id": "S048",
+          "name": "Emon Akter",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 37,
+            "ENG": 47,
+            "MAT": 47,
+            "PHY": {
+              "theory": 41,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 36,
+              "practical": 6
+            },
+            "BIO": {
+              "theory": 22,
+              "practical": 9
+            },
+            "HMT": {
+              "theory": 25,
+              "practical": 10
+            }
+          }
+        },
+        {
+          "id": "S049",
+          "name": "Sadia Begum",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 65,
+            "ENG": 57,
+            "MAT": 67,
+            "PHY": {
+              "theory": 49,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 40,
+              "practical": 12
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 13
+            },
+            "HMT": {
+              "theory": 60,
+              "practical": 5
+            }
+          }
+        },
+        {
+          "id": "S050",
+          "name": "Nusrat Karim",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 45,
+            "ENG": 52,
+            "MAT": 37,
+            "PHY": {
+              "theory": 25,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 39,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 8
+            },
+            "REL": 38
+          }
+        },
+        {
+          "id": "S051",
+          "name": "Chandan Islam",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 69,
+            "ENG": 73,
+            "MAT": 61,
+            "PHY": {
+              "theory": 49,
+              "practical": 17
+            },
+            "CHE": {
+              "theory": 49,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 45,
+              "practical": 18
+            },
+            "HMT": {
+              "theory": 46,
+              "practical": 17
+            }
+          }
+        },
+        {
+          "id": "S052",
+          "name": "Nusrat Begum",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 37,
+            "ENG": 36,
+            "MAT": 27,
+            "PHY": {
+              "theory": 29,
+              "practical": 8
+            },
+            "CHE": {
+              "theory": 31,
+              "practical": 8
+            },
+            "BIO": {
+              "theory": 26,
+              "practical": 9
+            },
+            "REL": 36
+          }
+        },
+        {
+          "id": "S053",
+          "name": "Farzana Das",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 70,
+            "ENG": 78,
+            "MAT": 74,
+            "PHY": {
+              "theory": 47,
+              "practical": 21
+            },
+            "CHE": {
+              "theory": 55,
+              "practical": 17
+            },
+            "BIO": {
+              "theory": 61,
+              "practical": 20
+            },
+            "HMT": {
+              "theory": 49,
+              "practical": 20
+            }
+          }
+        },
+        {
+          "id": "S054",
+          "name": "Bithi Ahmed",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 78,
+            "ENG": 85,
+            "MAT": 76,
+            "PHY": {
+              "theory": 68,
+              "practical": 18
+            },
+            "CHE": {
+              "theory": 58,
+              "practical": 18
+            },
+            "BIO": {
+              "theory": 59,
+              "practical": 20
+            },
+            "AGR": {
+              "theory": 51,
+              "practical": 23
+            }
+          }
+        },
+        {
+          "id": "S055",
+          "name": "Tanvir Rahman",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 70,
+            "ENG": 70,
+            "MAT": 54,
+            "PHY": {
+              "theory": 56,
+              "practical": 15
+            },
+            "CHE": {
+              "theory": 47,
+              "practical": 13
+            },
+            "BIO": {
+              "theory": 52,
+              "practical": 15
+            },
+            "HMT": {
+              "theory": 40,
+              "practical": 14
+            }
+          }
+        },
+        {
+          "id": "S056",
+          "name": "Urmi Khatun",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 22,
+            "ENG": 41,
+            "MAT": 28,
+            "PHY": {
+              "theory": 25,
+              "practical": 7
+            },
+            "CHE": {
+              "theory": 25,
+              "practical": 5
+            },
+            "BIO": {
+              "theory": 37,
+              "practical": 17
+            },
+            "REL": 35
+          }
+        },
+        {
+          "id": "S057",
+          "name": "Gias Das",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 78,
+            "ENG": 77,
+            "MAT": 84,
+            "PHY": {
+              "theory": 61,
+              "practical": 19
+            },
+            "CHE": {
+              "theory": 57,
+              "practical": 22
+            },
+            "BIO": {
+              "theory": 51,
+              "practical": 18
+            },
+            "AGR": {
+              "theory": 65,
+              "practical": 18
+            }
+          }
+        },
+        {
+          "id": "S058",
+          "name": "Gias Ahmed",
+          "class": "Class 10",
+          "optional": "REL",
+          "marks": {
+            "BAN": 38,
+            "ENG": 42,
+            "MAT": 28,
+            "PHY": {
+              "theory": 38,
+              "practical": 12
+            },
+            "CHE": {
+              "theory": 38,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 20,
+              "practical": 10
+            },
+            "REL": 44
+          }
+        },
+        {
+          "id": "S059",
+          "name": "Jui Rahman",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 70,
+            "ENG": 45,
+            "MAT": 60,
+            "PHY": {
+              "theory": 38,
+              "practical": 10
+            },
+            "CHE": {
+              "theory": 31,
+              "practical": 10
+            },
+            "BIO": {
+              "theory": 57,
+              "practical": 16
+            },
+            "HMT": {
+              "theory": 33,
+              "practical": 15
+            }
+          }
+        },
+        {
+          "id": "S060",
+          "name": "Rafi Begum",
+          "class": "Class 10",
+          "optional": "HMT",
+          "marks": {
+            "BAN": 58,
+            "ENG": 48,
+            "MAT": 48,
+            "PHY": {
+              "theory": 39,
+              "practical": 13
+            },
+            "CHE": {
+              "theory": 38,
+              "practical": 16
+            },
+            "BIO": {
+              "theory": 29,
+              "practical": 12
+            },
+            "HMT": {
+              "theory": 44,
+              "practical": 20
+            }
+          }
+        },
+        {
+          "id": "S061",
+          "name": "Emon Akter",
+          "class": "Class 10",
+          "optional": "AGR",
+          "marks": {
+            "BAN": 44,
+            "ENG": 41,
+            "MAT": 29,
+            "PHY": {
+              "theory": 22,
+              "practical": 9
+            },
+            "CHE": {
+              "theory": 30,
+              "practical": 7
+            },
+            "BIO": {
+              "theory": 33,
+              "practical": 7
+            },
+            "AGR": {
+              "theory": 25,
+              "practical": 10
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
