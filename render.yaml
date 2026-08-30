@@ -1,0 +1,31 @@
+# Render Blueprint — one-click provisioning for the P08 backend.
+#
+# Usage: Render dashboard -> New -> Blueprint -> select this repo. Render
+# reads this file and pre-fills the service; you only need to paste in the
+# four values marked `sync: false` below (Render prompts for each during
+# setup) rather than typing every field by hand.
+#
+# The database itself is Supabase (external), not defined here — this
+# blueprint only provisions the web service.
+
+services:
+  - type: web
+    name: p08-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build && npx prisma generate
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Do not add PORT here — Render injects its own and the app already
+      # reads process.env.PORT (see backend/src/config/env.ts).
+      - key: FRONTEND_ORIGIN
+        sync: false # the deployed frontend's origin; a placeholder like
+                    # http://localhost:5173 works until the frontend deploys
+      - key: DATABASE_URL
+        sync: false # Supabase pooled connection string (port 6543)
+      - key: DIRECT_URL
+        sync: false # Supabase direct connection string (port 5432), used
+                    # only if a migration is ever run from Render itself
